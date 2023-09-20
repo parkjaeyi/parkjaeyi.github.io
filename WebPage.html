@@ -3,24 +3,69 @@
 <head>
     
     <title>Working To-Do list</title>
-    <h1>To-Do List:</h1>
+    
     <link rel="stylesheet" href="WebPage.css"> 
 </head>
-<body class="border-wall">
-    <div class="container">
-        <div class="container-list">
-            <ul class='list'>
-                <li><input class="textbox" name='bullet-points'value="Enter your List" >
-                    <!--Insert JavaScript-->
-                </li>
-            </ul>
-        </div>
+<body>
+    <header>
+        <h1>To Do List:</h1>
+    <form id="task-form">
+        <input type="text" id= 'task-input' placeholder="What do you plan to do?">
+        <input type="submit" id='submit-input'value="+">
+    </form>
+    </header>
+    <main>
+        <section class="task-list">
+            
+            <div id="tasks">
+                <!--<div class="task"> 
+                    <div class="content">
+                        <input type="text" class="text" value='new task' >
+                    </div>
+                    <div class="action">
+                        <button class="edit">Edit</button>
+                        <button class="delete"> X</button>
+                    </div>
+                </div> -->
+            </div>
+        </section> 
+
+        <section class="complete">
+            <div class="complete-border">
+
+            <h3>Completed</h3>
+
+            <div id="complete-task">
+                <div id="c-tasks">
+                    
+                    <!-- <div class="task">
+                        <div class="content">
+                            <input type="text" class="text" value='new task' >
+                        </div>
+                        <div class="action">
+                            <button class="edit">Edit</button>
+                            <button class="delete"> X</button>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
         
-        <div class="buttons">
-            <button class="Save">Save</button>
-            <button class="Edit">Edit </button>
-        </div>
-    </div>
+        
+            </div>
+        </section>
+
+
+         
+    </main>
+      
+           
+            
+
+       
+             
+        
+    
+    <script src="ToDoList.js"></script>
     
    
     
