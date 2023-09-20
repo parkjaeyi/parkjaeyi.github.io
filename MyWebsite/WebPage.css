@@ -8,9 +8,9 @@ body{
     display:flex;
     flex-direction: column;
     min-height: 100px;
-    background: peachpuff;
-    color: gray;
-    font-family: 'Fira sans',sans-serif;
+    background: rgb(245, 243, 156);
+    color: black;
+    font-family: 'Pencil', sans-serif;
 }
 header{
     padding:2rem 1rem;
@@ -53,6 +53,9 @@ input,button{
     font-weight: 500;
     cursor:pointer;
     transition:0.4s;
+    margin-left: 15px;
+  
+    margin-bottom: 17px;
     
 }
 #submit-input:hover{
@@ -66,7 +69,6 @@ main{
     flex-direction: column;
     display: inline-flex;
     min-height: 100px;
-    background: peachpuff;
     color: gray;
     flex:1 1 0%;
     max-width: 500px;
@@ -143,32 +145,32 @@ color: black;
     color:darkred;
 }
 
-h3{
+h3{ /*Title: Completed*/
     text-align: center;
     color: green;
     text-decoration: underline;
-    
+    font-family: 'Pencil','Courier New', Courier, monospace;
+    font-size: 30px;
 }
 
+.complete{
+    box-shadow:100px,20px;
+}  
 .complete-border{
     border: solid;
-    border-color: burlywood;
+    border-color: rgb(245, 245, 50);
+    border-radius: 10px;
+    background-color:rgb(245, 245, 50);
     min-width: 470px;
     align-items: center;
     flex-direction: column;
     height: 500px;
     position: fixed;
     margin-top: 100px;
+    box-shadow: 20px,20px, 1000px;
    
 }
-.complete-task{
-    text-align: center;
-    flex-direction: column;
-    position: fixed;
-    margin-top: 100px;
-    margin-right: 100px;
 
-}
 #c-tasks .task{
     display:flex;
     justify-content: space-between;
@@ -177,13 +179,15 @@ h3{
     border-radius: 1rem;
     margin-bottom: 1rem;
     color:blueviolet;
+    margin:10px;
     
 }
 #c-tasks .task .content .text{
-    color: blueviolet;
-    font-size: 1.125rem;
+    color: black;
+    font-size: 2rem;
+    font-family: 'Pencil', sans-serif;
     width: 100%;
     display:block;
     transition:0.4s;
-
+   
 }
