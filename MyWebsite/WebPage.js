@@ -3,6 +3,7 @@ window.addEventListener('load',()=>{
     const input=document.querySelector('#task-input');
     const list_el= document.querySelector('#tasks');
     const complete_el=document.querySelector('#c-tasks');
+
    
 
    // console.log(form);
@@ -22,8 +23,8 @@ window.addEventListener('load',()=>{
 
 
 
-        const og_task=document.createElement('div');
-        og_task.classList.add('task');
+        // const og_task=document.createElement('div');
+        // og_task.classList.add('task');
 
         const task_content_el=document.createElement("div");
 
@@ -36,7 +37,7 @@ window.addEventListener('load',()=>{
 
         task_el.appendChild(listItem);
         task_el.appendChild(task_content_el);
-        og_task.appendChild(task_el);
+        //og_task.appendChild(task_el);
 
         const task_input_el=document.createElement('input');
         task_input_el.classList.add("text"); //add the class text
@@ -46,34 +47,6 @@ window.addEventListener('load',()=>{
         
         task_content_el.appendChild(task_input_el);
         
-
-
-
-        
-        // task_input_el.addEventListener('click',()=>{
-        //     task_input_el.style.textDecoration="line-through";
-        // })
-        // task_input_el.addEventListener('click',()=>{
-        //     if(task_input_el.style.textDecoration!="line-through"){
-        //         return task_input_el.style.textDecoration="none";
-        //     }
-        // })
-        
-
-        // list_el.addEventListener('mouseover',()=>{
-
-        //     if(document.getElementById('tasks').style.textDecoration!="line-through"){
-        //         task_content_el.addEventListener('click',()=>{
-        //             document.getElementById('tasks').style.textDecoration="line-through";
-        //     })}
-        //     else if(document.getElementById('tasks').style.textDecoration="line-through"){
-        //         const complete_content_el=document.createElement('div');
-        //         complete_content_el.classList.add('c-content');
-        //         complete_el.appendChild(complete_content_el);
-        //     }
-                    
-        // })
-
 
         const task_actions_el=document.createElement('div');
         task_actions_el.classList.add('action');
@@ -93,7 +66,7 @@ window.addEventListener('load',()=>{
         
 
         task_el.appendChild(task_actions_el);
-        og_task.appendChild(task_el);
+        //og_task.appendChild(task_el);
         list_el.appendChild(task_el);
 
         input.value='';// it will reset the textbox
@@ -121,14 +94,17 @@ window.addEventListener('load',()=>{
             
         })
 
-/* making the task to be crossed out and undo it (you can crossout and undo it ONE TIME)*/
+/* making the task to be crossed out and undo it (prob: you can crossout and undo it ONE TIME)*/
+        const complete_task_el=document.createElement('div');
+        // complete_task_el.classList.add('task');
+
         task_input_el.addEventListener('mouseover',()=>{
             task_input_el.style.cursor='pointer';
         })
 
         task_input_el.addEventListener('click',()=>{
             
-            //task_input_el.style.textDecoration="line-through";
+
             
             task_input_el.addEventListener('click',()=>{
             if(!(task_input_el.style.textDecoration="line-through")){
@@ -136,24 +112,33 @@ window.addEventListener('load',()=>{
                 (task_input_el.style.textDecoration="line-through");
             }
             
-            else{
-                task_input_el.style.textDecoration="line-through";
-                complete_el.append(task_el);
-               
-            }
-            
             })
+            task_input_el.style.textDecoration="line-through";
+           // complete_task_el.append(task_el);
+            complete_el.append(task_el);
+
+            //complete_el.appendChild(complete_task_el);
+
+            
             
         })
+
+        task_delete_el.addEventListener('click',()=>{
+            complete_el.removeChild(task_el);
+            
+        })
+
+       
+       
         
 
+       
+   
         
        
-    /* if the task is crossed out, then it will be moved to "complete" table*/
-        
      })//this is the form of submit
 
     
 
 
-})
+})  
