@@ -38,14 +38,16 @@ input,button{
 }
 #task-input{
     flex:1 1 0%;
-    background-color: darkgrey;
+    background-color: honeydew;
     padding:1rem;
     border-radius:1rem;
     color: darkcyan;
     font-size: 1.25rem;
 }
 #task-input::placeholder{
-    color: aquamarine;
+    color: grey;
+    font-family:'Pencil','Courier New', Courier, monospace ;
+    font-size:25px;
 }
 #submit-input{
     color: black;
@@ -94,7 +96,7 @@ main{
 #tasks .task {
     display:flex;
     justify-content: space-between;
-    background-color: lightgreen;
+    background-color: rgb(236, 219, 186);
     padding: 1rem;
     border-radius: 1rem;
     margin-bottom: 1rem;
@@ -122,7 +124,7 @@ color: black;
     margin:0,-0.5rem;
 }
 
-.task .action button{
+.task .action img{
     cursor:pointer;
     margin:0rem;
     font-size: 1.125rem;
@@ -131,10 +133,10 @@ color: black;
     transition: 0.4s;
 }
 
-.task .action button:hover{
+.task .action img:hover{
     opacity:0.6;
     }
-.task .action button:active{
+.task .action img:active{
     opacity:0.8;
 }
 .task .action .edit{
@@ -143,6 +145,7 @@ color: black;
 .task .action .X{
     padding-left: 20px;
     color:darkred;
+    
 }
 
 h3{ /*Title: Completed*/
