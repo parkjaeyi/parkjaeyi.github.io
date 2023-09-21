@@ -14,6 +14,10 @@ body{
     background: rgb(245, 243, 156);
     color: black;
     font-family: 'Pencil', sans-serif;
+    background-image: url(looseleaf.jpg);
+    background-size:900px;
+    
+    
 }
 header{
     padding:2rem 1rem;
@@ -38,17 +42,16 @@ input,button{
     border:none;
     outline: none;
     background: none;
-    
 }
+
+
 #task-input{
     flex:1 1 0%;
-    background-color: honeydew;
-    padding:1rem;
-    border-radius:1rem;
-    color: darkcyan;
+    margin-top:28px; 
     font-size: 1.25rem;
     font-family:'Pencil','Courier New';
     font-size:25px;
+    /* border: solid; */
 }
 #task-input::placeholder{
     color: grey;
@@ -56,14 +59,14 @@ input,button{
     font-size:25px;
 }
 #submit-input{
-    color: black;
-    font-size: 1.25rem;
-    font-weight: 500;
     cursor:pointer;
     transition:0.4s;
-    margin-left: 15px;
-  
-    margin-bottom: 17px;
+    margin-top: 19px;
+    
+    padding-right: 130px;
+    margin-right: 50px;
+    nav-left: 20px;
+    /* border: solid; */
     
 }
 #submit-input:hover{
