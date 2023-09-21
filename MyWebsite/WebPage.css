@@ -104,12 +104,14 @@ main{
 }
 #tasks .task {
     display:flex;
-    justify-content: space-between;
-    background-color: honeydew;
-    padding: 1rem;
+    
+    /* background-color: honeydew; */
+    padding: 2px;
     border-radius: 1rem;
-    margin-bottom: 1rem;
+    /* border: solid; */
     color:black;
+    margin-top: 25px;
+    margin-bottom: 28px;
     
 }
 
@@ -162,6 +164,7 @@ font-size: large;
     opacity:0.8;
 }
 
+
 .task .action .X:hover{
     
     opacity:0.6;
@@ -172,8 +175,12 @@ font-size: large;
     opacity:0.8;
  
 }
+.task .action .edit{
+    margin-bottom: 5px;
+}
 
 .task .action .X{
+    margin-bottom: 5px;
     padding-left: 20px;
     
 }
