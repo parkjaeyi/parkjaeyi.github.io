@@ -51,13 +51,17 @@ window.addEventListener('load',()=>{
         const task_actions_el=document.createElement('div');
         task_actions_el.classList.add('action');
 
-        const task_edit_el=document.createElement("button");
+        const task_edit_el=document.createElement("image");
         task_edit_el.classList.add('edit');
-        task_edit_el.innerHTML= "edit";
+        task_edit_el.innerHTML= "<input type='image' id='edit' src='pen-to-square-regular.svg' alt='edit' height='30'/></i>";
 
-        const task_delete_el=document.createElement('button');
+        const task_save_el=document.createElement("image");
+        task_save_el.classList.add('save');
+        task_save_el.innerHTML="<input type='image' id='save' src='floppy-disk-regular.svg' alt='save' height='30'/></i>";
+
+        const task_delete_el=document.createElement('image');
         task_delete_el.classList.add('X');
-        task_delete_el.innerHTML='X'
+        task_delete_el.innerHTML="<input type='image' id='X' src='eraser-solid.svg' alt='delete' height='30'/></i>"
 
         task_actions_el.appendChild(task_edit_el);
         task_actions_el.appendChild(task_delete_el);
@@ -74,27 +78,47 @@ window.addEventListener('load',()=>{
         
         //now we are making the buttons to work
         task_edit_el.addEventListener('click',()=>{
-            if(task_edit_el.innerText.toLowerCase() =="edit"){
-                task_input_el.removeAttribute('readonly');
-                task_input_el.focus();
-                task_edit_el.innerText="Save";
-            }
-            else if (task_edit_el.innerText.toLowerCase() =="save"){
+           
+            task_input_el.removeAttribute('readonly');
+            task_input_el.focus();
+            let tempImage=task_edit_el.innerHTML ;
+            task_edit_el.innerHTML=task_save_el.innerHTML;
+            tempImage.innerHTML=task_save_el.innerHTML;
+
+            if(task_edit_el.innerHTML="<input type='image' id='save' src='floppy-disk-regular.svg' alt='save' height='30'/></i>"){
+                
+                task_edit_el.addEventListener('click', ()=>{
                 task_input_el.setAttribute('readonly','readonly');
                 task_input_el.focus();
-                task_edit_el.innerText="Edit";
+                task_save_el.innerHTML=tempImage.innerHTML;
+                tempImage=task_edit_el.innerHTML;
+                
+                task_edit_el.innerHTML=tempImage;
+                //task_edit_el.innerHTML=task_save_el.innerHTML;
+                
+                //task_save_el.innerHTML=tempImage;
+                    
+                })
             }
-            // else{
-            //     console.log('Saved');
-            // }
+            
+            // task_input_el.removeAttribute('readonly');
+            // task_input_el.focus();
+            // task_edit_el.innerHTML=task_save_el.innerHTML;
         })
-
+        task_save_el.addEventListener('click',()=>{
+            task_input_el.setAttribute('readonly','readonly');
+            task_input_el.focus();
+            
+            task_save_el.innerHTML=task_edit_el.innerHTML;
+            
+        })
+ 
         task_delete_el.addEventListener('click',()=>{
             list_el.removeChild(task_el);
             
         })
 
-/* making the task to be crossed out and undo it (prob: you can crossout and undo it ONE TIME)*/
+        /* making the task to be crossed out and undo it (prob: you can crossout and undo it ONE TIME)*/
         const complete_task_el=document.createElement('div');
         // complete_task_el.classList.add('task');
 
@@ -102,9 +126,8 @@ window.addEventListener('load',()=>{
             task_input_el.style.cursor='pointer';
         })
 
+        // this is to check and uncheck
         task_input_el.addEventListener('click',()=>{
-            
-
             
             task_input_el.addEventListener('click',()=>{
             if(!(task_input_el.style.textDecoration="line-through")){
@@ -115,9 +138,18 @@ window.addEventListener('load',()=>{
             })
             task_input_el.style.textDecoration="line-through";
            // complete_task_el.append(task_el);
+           
+            //task_el.remove(task_edit_el);
             complete_el.append(task_el);
-
-            //complete_el.appendChild(complete_task_el);
+            if((complete_el.style.textDecoration="line-through"))
+            {
+                task_input_el.addEventListener('click',()=>{
+                    complete_el.removeChild(task_el);
+                    list_el.append(task_el);
+                    (task_input_el.style.textDecoration="none");
+                })
+                
+            }
 
             
             
@@ -141,4 +173,4 @@ window.addEventListener('load',()=>{
     
 
 
-})  
+}) 
