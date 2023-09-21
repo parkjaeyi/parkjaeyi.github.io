@@ -14,9 +14,8 @@ body{
     background: rgb(245, 243, 156);
     color: black;
     font-family: 'Pencil', sans-serif;
-    background-image: url(looseleaf.jpg);
-    background-size:900px;
-    
+    background-image: url(looseleaf5.jpg);
+    background-repeat: no-repeat; 
     
 }
 header{
@@ -26,9 +25,9 @@ header{
     margin: 0 auto;
 }
 header h1{
-    font-size: 2.5rem;
+    font-size: 50px;
     font-weight: 300;
-    margin-bottom: 1rem;
+    margin-top: 50px;
     padding-left: 0;
 }
 
@@ -189,7 +188,7 @@ h3{ /*Title: Completed*/
     text-align: center;
     color: green;
     text-decoration: underline;
-    font-family: 'Pencil','Courier New';
+    font-family: 'Pencil','Courier New', Courier, monospace;
     font-size: 30px;
 }
 
