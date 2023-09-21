@@ -35,6 +35,7 @@ input,button{
     border:none;
     outline: none;
     background: none;
+    
 }
 #task-input{
     flex:1 1 0%;
@@ -46,7 +47,7 @@ input,button{
 }
 #task-input::placeholder{
     color: grey;
-    font-family:'Pencil','Courier New' ;
+    font-family:'Pencil','Courier New';
     font-size:25px;
 }
 #submit-input{
@@ -96,32 +97,36 @@ main{
 #tasks .task {
     display:flex;
     justify-content: space-between;
-    background-color: rgb(236, 219, 186);
+    background-color: honeydew;
     padding: 1rem;
     border-radius: 1rem;
     margin-bottom: 1rem;
-    color:blueviolet;
+    color:black;
     
 }
 
 #tasks .task .content .text{
-    color: blueviolet;
-    font-size: 1.125rem;
+    color: rgb(79, 77, 77);
+    font-size: 30px;
     width: 100%;
     display:block;
     transition:0.4s;
+    font-family:'Pencil','Courier New';
 
 }
 
 #tasks .task .content .text:not(:read-only){
 
 color: black;
+font-family: Arial, Helvetica, sans-serif;
+font-size: large;
 
 }
 
 #tasks .task .action{
     display:flex;
     margin:0,-0.5rem;
+    transition: 0.4s;
 }
 
 .task .action img{
@@ -133,18 +138,35 @@ color: black;
     transition: 0.4s;
 }
 
-.task .action img:hover{
+/* .task .action img:hover{
     opacity:0.6;
     }
 .task .action img:active{
     opacity:0.8;
+} */
+
+/*Icon Buttons*/
+.task .action .edit:hover{
+    opacity:0.6;
+    
 }
-.task .action .edit{
-    color:purple;
+.task .action .edit:active{
+    opacity:0.8;
 }
+
+.task .action .X:hover{
+    
+    opacity:0.6;
+  
+}
+.task .action .X:active{
+    
+    opacity:0.8;
+ 
+}
+
 .task .action .X{
     padding-left: 20px;
-    color:darkred;
     
 }
 
@@ -181,7 +203,7 @@ h3{ /*Title: Completed*/
     padding: 1rem;
     border-radius: 1rem;
     margin-bottom: 1rem;
-    color:blueviolet;
+    color:black;
     margin:10px;
     
 }
