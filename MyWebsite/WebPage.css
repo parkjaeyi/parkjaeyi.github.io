@@ -46,7 +46,7 @@ input,button{
 }
 #task-input::placeholder{
     color: grey;
-    font-family:'Pencil','Courier New', Courier, monospace ;
+    font-family:'Pencil','Courier New' ;
     font-size:25px;
 }
 #submit-input{
