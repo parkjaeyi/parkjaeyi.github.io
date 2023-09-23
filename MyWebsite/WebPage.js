@@ -78,72 +78,42 @@ window.addEventListener('load',()=>{
         input.value='';// it will reset the textbox
         
         
-        //now we are making the buttons to work
-        task_edit_el.addEventListener('click',()=>{
-           taskEditFunction();
+//MAKING BUTTONS TO WORK
+task_edit_el.addEventListener('click',()=>{
+
+    taskEditFunction();
+
+})
 
 
-            if((task_edit_el.innerHTML="<input type='image' id='save' src='floppy-disk-regular.svg' alt='save' height='30'/></i>")){
-                
-                task_edit_el.addEventListener('click', ()=>{
-                    taskSaveFunction();
+function taskEditFunction(){
+    
+    task_input_el.removeAttribute('readonly');
+    task_input_el.focus();
+    task_edit_el.innerHTML=task_save_el.innerHTML; //task_edit_el.innerHTML has the innerHTML of task_save_el.innerHTML;
+    task_edit_el.addEventListener('click',()=>{
+    taskSaveFunction();
+    })
 
-                })
-            }
-            else{   
-                    if((task_edit_el.innerHTML="<input type='image' id='save' src='floppy-disk-regular.svg' alt='save' height='30'/></i>")){
 
-                        task_edit_el.addEventListener('click', ()=>{
-                            taskSaveFunction();
-                            return;
-                            
-                        })
-                        return;
-                    }
-                }
-                    
-            })
-            
-            // task_input_el.removeAttribute('readonly');
-            // task_input_el.focus();
-            // task_edit_el.innerHTML=task_save_el.innerHTML;
-       
-        function taskEditFunction(){
-            task_input_el.removeAttribute('readonly');
-            task_input_el.focus();
-            let tempImage=task_edit_el.innerHTML ;
-            task_edit_el.innerHTML=task_save_el.innerHTML;
-            task_save_el.innerHTML=tempImage;
-            // tempImage=task_save_el.innerHTML;
-        }
-        function taskSaveFunction(){
-           
-            task_input_el.setAttribute('readonly','readonly');
-            task_input_el.focus();
-            task_edit_el.innerHTML= "<input type='image' id='edit' src='pen-to-square-regular.svg' alt='edit' height='30'/></i>";
-            return;
-        }
-        
+}
+function taskSaveFunction(){
+   
+    task_input_el.setAttribute('readonly','readonly');
+    task_input_el.focus();
+    task_edit_el.innerHTML= "<input type='image' id='edit' src='pen-to-square-regular.svg' alt='edit' height='30'/></i>"; // back to its og
+    task_edit_el.addEventListener('click',()=>{
+        taskEditFunction();
+    })
+    
+}
 
-            // task_input_el.removeAttribute('readonly');
-            // task_input_el.focus();
-            // task_edit_el.innerHTML=task_save_el.innerHTML;
-            
-              
-                
-      
-        // task_save_el.addEventListener('click',()=>{
-        //         task_input_el.setAttribute('readonly','readonly');
-        //         task_input_el.focus();
-        //         task_save_el.innerHTML=task_edit_el.innerHTML;
-                
-        //     })
-           
-      
-          task_delete_el.addEventListener('click',()=>{
-            list_el.removeChild(task_el);
-            
-        })
+
+//delete button   
+  task_delete_el.addEventListener('click',()=>{
+    list_el.removeChild(task_el);
+    
+})
 
 /* making the task to be crossed out and undo it (prob: you can crossout and undo it ONE TIME)*/
 
