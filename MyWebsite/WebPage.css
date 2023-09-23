@@ -121,17 +121,18 @@ main{
     color:black;
     margin-top: 25px;
     margin-bottom: 28px;
-    border: solid;
+    /* border: solid; */
+    width: 90%;
 }
 
 #tasks .task .content .text{
     color: rgb(79, 77, 77);
     font-size: 30px;
-    width: 125%;
+    width: 100%;
     display:block;
     transition:0.4s;
     font-family:'Pencil','Courier New';
-    
+    /* border: solid; */
 
 }
 
@@ -187,7 +188,7 @@ font-size: large;
 }
 .task .action .edit{
     margin-bottom: 5px;
-    margin-left: 100px;
+    margin-left: 5px;
 }
 
 .task .action .X{
