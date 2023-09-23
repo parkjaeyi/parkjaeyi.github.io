@@ -10,16 +10,21 @@
 body{
     display:flex;
     flex-direction: column;
+    /* max-height: 100%;
+    max-width:100%; */
     background: rgb(245, 243, 156);
     color: black;
     font-family: 'Pencil', sans-serif;
     background-image: url(looseleaf5.jpg);
-    background-repeat: no-repeat; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     
+    
+}
+#textImage-border{
+    vertical-align: baseline;
 }
 header{
     padding:2rem 1rem;
@@ -60,11 +65,12 @@ input,button{
     color: grey;
     font-family:'Pencil','Courier New';
     font-size:25px;
+    /* border: solid; */
 }
 #submit-input{
     cursor:pointer;
     transition:0.4s;
-    margin-top: 19px;
+    margin-top: 30px;
     
     padding-right: 130px;
     margin-right: 50px;
@@ -88,14 +94,14 @@ main{
     max-width: 500px;
     width: 100%;
     margin: 0 auto;
-    
-    
+    vertical-align: baseline;
+   
    
 }
 
 .task-list{
     padding:1rem;
-    
+ 
     
 }
 .task-list h2{
@@ -115,16 +121,17 @@ main{
     color:black;
     margin-top: 25px;
     margin-bottom: 28px;
-    
+    border: solid;
 }
 
 #tasks .task .content .text{
     color: rgb(79, 77, 77);
     font-size: 30px;
-    width: 100%;
+    width: 125%;
     display:block;
     transition:0.4s;
     font-family:'Pencil','Courier New';
+    
 
 }
 
@@ -180,12 +187,13 @@ font-size: large;
 }
 .task .action .edit{
     margin-bottom: 5px;
+    margin-left: 100px;
 }
 
 .task .action .X{
     margin-bottom: 5px;
     padding-left: 20px;
-    
+ 
 }
 
 h3{ /*Title: Completed*/
