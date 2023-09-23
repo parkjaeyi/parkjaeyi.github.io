@@ -10,12 +10,15 @@
 body{
     display:flex;
     flex-direction: column;
-    min-height: 100px;
     background: rgb(245, 243, 156);
     color: black;
     font-family: 'Pencil', sans-serif;
     background-image: url(looseleaf5.jpg);
     background-repeat: no-repeat; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     
 }
 header{
@@ -46,13 +49,14 @@ input,button{
 
 #task-input{
     flex:1 1 0%;
-    margin-top:28px; 
+    margin-top:40px; 
     font-size: 1.25rem;
     font-family:'Pencil','Courier New';
     font-size:25px;
     /* border: solid; */
 }
 #task-input::placeholder{
+    margin-top: 20px;
     color: grey;
     font-family:'Pencil','Courier New';
     font-size:25px;
