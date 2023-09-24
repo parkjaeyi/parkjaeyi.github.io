@@ -59,15 +59,15 @@ window.addEventListener('load',()=>{
 
         const task_edit_el=document.createElement("image");
         task_edit_el.classList.add('edit');
-        task_edit_el.innerHTML= "<input type='image' id='edit' src='pen-to-square-regular.svg' alt='edit' height='30'/></i>";
+        task_edit_el.innerHTML= "<input type='image' id='edit' src='pen-to-square-regular.svg' alt='edit' height='30'>";
 
         const task_save_el=document.createElement("image");
         task_save_el.classList.add('save');
-        task_save_el.innerHTML="<input type='image' id='save' src='floppy-disk-regular.svg' alt='save' height='30'/></i>";
+        task_save_el.innerHTML="<input type='image' id='save' src='floppy-disk-regular.svg' alt='save' height='30'>";
 
         const task_delete_el=document.createElement('image');
         task_delete_el.classList.add('X');
-        task_delete_el.innerHTML="<input type='image' id='X' src='eraser-solid.svg' alt='delete' height='30'/></i>"
+        task_delete_el.innerHTML="<input type='image' id='X' src='eraser-solid.svg' alt='delete' height='30'>"
 
         task_actions_el.appendChild(task_date_el);
         task_actions_el.appendChild(task_edit_el);
@@ -99,7 +99,7 @@ window.addEventListener('load',()=>{
         function taskSaveFunction(){
             task_input_el.setAttribute('readonly','readonly');
             task_input_el.focus();
-            task_edit_el.innerHTML= "<input type='image' id='edit' src='pen-to-square-regular.svg' alt='edit' height='30'/></i>"; // back to its og
+            task_edit_el.innerHTML= "<input type='image' id='edit' src='pen-to-square-regular.svg' alt='edit' height='30'>"; // back to its og
             task_edit_el.addEventListener('click',()=>{
                 taskEditFunction();
             })
