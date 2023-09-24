@@ -118,45 +118,43 @@ function taskSaveFunction(){
 /* making the task to be crossed out and undo it (prob: you can crossout and undo it ONE TIME)*/
 
 
-        task_input_el.addEventListener('mouseover',()=>{
-            task_input_el.style.cursor='pointer';
-        })
+    task_input_el.addEventListener('mouseover',()=>{
+        task_input_el.style.cursor='pointer';
+    })
 
-        task_input_el.addEventListener('click',()=>{
-            
+
+
+    task_input_el.addEventListener('click',()=>{
+        if(task_input_el.style.textDecoration="none"){
+
+            crossout(); 
+
+        }
+
+
+        if((complete_el.style.textDecoration="line-through"))//complete_el.style.textDecoration="line-through" 
+        {
             task_input_el.addEventListener('click',()=>{
-            if(!(task_input_el.style.textDecoration="line-through")){
-                
-                (task_input_el.style.textDecoration="line-through");
-                
-            }
-            
+            undo();
             })
-            complete_el.append(task_el);
-           // complete_task_el.append(task_el);
-           
-            //task_el.remove(task_edit_el);
-            
-            
-            if((complete_el.style.textDecoration="line-through"))
-            {
-                task_input_el.addEventListener('click',()=>{
-                    complete_el.removeChild(task_el);
-                    list_el.append(task_el);
-                    return (task_input_el.style.textDecoration="none");
-                    
-                })
+        }
 
-                return;
-            }
-         
-            
-        })
+    })
+    function crossout(){
+    (task_input_el.style.textDecoration="line-through");
 
-        task_delete_el.addEventListener('click',()=>{
-            complete_el.removeChild(task_el);
-            
-        })
+    complete_el.append(task_el);
+    }
+    function undo(){
+    complete_el.removeChild(task_el);
+    list_el.append(task_el);
+    task_input_el.style.textDecoration="none";
+    }
+
+    task_delete_el.addEventListener('click',()=>{
+        complete_el.removeChild(task_el);
+        
+    })
 
        
        
