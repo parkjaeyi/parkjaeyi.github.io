@@ -8,7 +8,7 @@ window.addEventListener('load',()=>{
 
    
 
-   // console.log(form);
+// list of tasks
 
     form.addEventListener('submit',(e)=>{
         e.preventDefault();
@@ -27,16 +27,16 @@ window.addEventListener('load',()=>{
 
         // const og_task=document.createElement('div');
         // og_task.classList.add('task');
+        
 
         const task_content_el=document.createElement("div");
-
         task_content_el.classList.add('content');
         //task_content_el.innerText=task;
 
         const listItem=document.createElement('li');
-        
         listItem.classList.add('content');
 
+       
         task_el.appendChild(listItem);
         task_el.appendChild(task_content_el);
         //og_task.appendChild(task_el);
@@ -53,6 +53,10 @@ window.addEventListener('load',()=>{
         const task_actions_el=document.createElement('div');
         task_actions_el.classList.add('action');
 
+        const task_date_el=document.createElement("input");
+        task_date_el.classList.add('date');
+        task_date_el.type='date';
+
         const task_edit_el=document.createElement("image");
         task_edit_el.classList.add('edit');
         task_edit_el.innerHTML= "<input type='image' id='edit' src='pen-to-square-regular.svg' alt='edit' height='30'/></i>";
@@ -65,9 +69,10 @@ window.addEventListener('load',()=>{
         task_delete_el.classList.add('X');
         task_delete_el.innerHTML="<input type='image' id='X' src='eraser-solid.svg' alt='delete' height='30'/></i>"
 
+        task_actions_el.appendChild(task_date_el);
         task_actions_el.appendChild(task_edit_el);
         task_actions_el.appendChild(task_delete_el);
-
+        
 
         
 
@@ -79,90 +84,85 @@ window.addEventListener('load',()=>{
         
         
 //MAKING BUTTONS TO WORK
-task_edit_el.addEventListener('click',()=>{
+        task_edit_el.addEventListener('click',()=>{
+            taskEditFunction();
+        })
 
-    taskEditFunction();
-
-})
-
-
-function taskEditFunction(){
-    
-    task_input_el.removeAttribute('readonly');
-    task_input_el.focus();
-    task_edit_el.innerHTML=task_save_el.innerHTML; //task_edit_el.innerHTML has the innerHTML of task_save_el.innerHTML;
-    task_edit_el.addEventListener('click',()=>{
-    taskSaveFunction();
-    })
-
-
-}
-function taskSaveFunction(){
-   
-    task_input_el.setAttribute('readonly','readonly');
-    task_input_el.focus();
-    task_edit_el.innerHTML= "<input type='image' id='edit' src='pen-to-square-regular.svg' alt='edit' height='30'/></i>"; // back to its og
-    task_edit_el.addEventListener('click',()=>{
-        taskEditFunction();
-    })
-    
-}
+        function taskEditFunction(){
+            task_input_el.removeAttribute('readonly');
+            task_input_el.focus();
+            task_edit_el.innerHTML=task_save_el.innerHTML; //task_edit_el.innerHTML has the innerHTML of task_save_el.innerHTML;
+            task_edit_el.addEventListener('click',()=>{
+            taskSaveFunction();
+            })
+        }
+        function taskSaveFunction(){
+            task_input_el.setAttribute('readonly','readonly');
+            task_input_el.focus();
+            task_edit_el.innerHTML= "<input type='image' id='edit' src='pen-to-square-regular.svg' alt='edit' height='30'/></i>"; // back to its og
+            task_edit_el.addEventListener('click',()=>{
+                taskEditFunction();
+            })
+            
+        }
 
 
-//delete button   
-  task_delete_el.addEventListener('click',()=>{
-    list_el.removeChild(task_el);
-    
-})
+        //delete button   
+          task_delete_el.addEventListener('click',()=>{
+            list_el.removeChild(task_el);
+            
+        })
 
 /* making the task to be crossed out and undo it */
-    task_input_el.addEventListener('mouseover',()=>{
-        task_input_el.style.cursor='pointer';
-    })
+        task_input_el.addEventListener('mouseover',()=>{
+            task_input_el.style.cursor='pointer';
+        })
 
-    task_input_el.addEventListener('click',()=>{
-        if(task_input_el.style.textDecoration="none"){
-            crossout(); 
-        }
-        if((complete_el.style.textDecoration="line-through"))//complete_el.style.textDecoration="line-through" 
-        {
+        task_input_el.addEventListener('click',()=>{
+            if(task_input_el.style.textDecoration="none"){
+                crossout(); 
+            }
+            if((complete_el.style.textDecoration="line-through"))//complete_el.style.textDecoration="line-through" 
+            {
+                task_input_el.addEventListener('click',()=>{
+                    
+                    undo();
+                    
+                })
+              
+            }
+
+        })
+
+        function crossout(){
+            (task_input_el.style.textDecoration="line-through");
+            task_actions_el.removeChild(task_edit_el);
+            task_actions_el.removeChild(task_date_el);
+            task_el.appendChild(task_actions_el);
+            complete_el.append(task_el);
             task_input_el.addEventListener('click',()=>{
-                
                 undo();
-                
             })
-        
         }
+        function undo(){
+            complete_el.removeChild(task_el);
+            task_actions_el.removeChild(task_delete_el);
+            task_actions_el.append(task_date_el);
+            task_actions_el.append(task_edit_el);
+            task_actions_el.append(task_delete_el);
+            task_el.appendChild(task_actions_el);
+            list_el.append(task_el);
+            task_input_el.style.textDecoration="none";
+            task_input_el.addEventListener('click',()=>{
+                crossout();
+            })
+        }
+            
 
-    })
-
-    function crossout(){
-        (task_input_el.style.textDecoration="line-through");
-        task_actions_el.removeChild(task_edit_el);
-        task_el.appendChild(task_actions_el);
-        complete_el.append(task_el);
-        task_input_el.addEventListener('click',()=>{
-            undo();
+        task_delete_el.addEventListener('click',()=>{
+            complete_el.removeChild(task_el);
+            
         })
-    }
-    function undo(){
-        complete_el.removeChild(task_el);
-        task_actions_el.removeChild(task_delete_el);
-        task_actions_el.append(task_edit_el);
-        task_actions_el.append(task_delete_el);
-        task_el.appendChild(task_actions_el);
-        list_el.append(task_el);
-        task_input_el.style.textDecoration="none";
-        task_input_el.addEventListener('click',()=>{
-            crossout();
-        })
-    }
-        
-
-    task_delete_el.addEventListener('click',()=>{
-        complete_el.removeChild(task_el);
-        
-    })
 
        
        
