@@ -115,41 +115,49 @@ function taskSaveFunction(){
     
 })
 
-/* making the task to be crossed out and undo it (prob: you can crossout and undo it ONE TIME)*/
-
-
+/* making the task to be crossed out and undo it */
     task_input_el.addEventListener('mouseover',()=>{
         task_input_el.style.cursor='pointer';
     })
 
-
-
     task_input_el.addEventListener('click',()=>{
         if(task_input_el.style.textDecoration="none"){
-
             crossout(); 
-
         }
-
-
         if((complete_el.style.textDecoration="line-through"))//complete_el.style.textDecoration="line-through" 
         {
             task_input_el.addEventListener('click',()=>{
-            undo();
+                
+                undo();
+                
             })
+        
         }
 
     })
-    function crossout(){
-    (task_input_el.style.textDecoration="line-through");
 
-    complete_el.append(task_el);
+    function crossout(){
+        (task_input_el.style.textDecoration="line-through");
+        task_actions_el.removeChild(task_edit_el);
+        task_el.appendChild(task_actions_el);
+        complete_el.append(task_el);
+        task_input_el.addEventListener('click',()=>{
+            undo();
+        })
     }
     function undo(){
-    complete_el.removeChild(task_el);
-    list_el.append(task_el);
-    task_input_el.style.textDecoration="none";
+        complete_el.removeChild(task_el);
+        task_actions_el.removeChild(task_delete_el);
+        task_actions_el.append(task_edit_el);
+        task_actions_el.append(task_delete_el);
+        task_el.appendChild(task_actions_el);
+        list_el.append(task_el);
+        task_input_el.style.textDecoration="none";
+        task_input_el.addEventListener('click',()=>{
+            crossout();
+        })
     }
+        
 
     task_delete_el.addEventListener('click',()=>{
         complete_el.removeChild(task_el);
