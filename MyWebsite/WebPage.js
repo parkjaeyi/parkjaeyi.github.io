@@ -110,6 +110,7 @@ window.addEventListener('load',()=>{
         //delete button   
           task_delete_el.addEventListener('click',()=>{
             list_el.removeChild(task_el);
+            deleteSound();
             
         })
 
@@ -121,12 +122,14 @@ window.addEventListener('load',()=>{
         task_input_el.addEventListener('click',()=>{
             if(task_input_el.style.textDecoration="none"){
                 crossout(); 
+                
             }
             if((complete_el.style.textDecoration="line-through"))//complete_el.style.textDecoration="line-through" 
             {
                 task_input_el.addEventListener('click',()=>{
                     
                     undo();
+                    
                     
                 })
               
@@ -135,14 +138,21 @@ window.addEventListener('load',()=>{
         })
 
         function crossout(){
-            (task_input_el.style.textDecoration="line-through");
+            crossoutSound('pencil_check_mark_1-88805-[AudioTrimmer.com].mp3');
+            task_input_el.style.textDecoration="line-through";
             task_actions_el.removeChild(task_edit_el);
             task_actions_el.removeChild(task_date_el);
             task_el.appendChild(task_actions_el);
             complete_el.append(task_el);
+
             task_input_el.addEventListener('click',()=>{
                 undo();
             })
+        }
+        function crossoutSound(filename){
+            let audio=new Audio(filename);
+            audio.loop=false;
+            audio.play();
         }
         function undo(){
             complete_el.removeChild(task_el);
@@ -157,10 +167,15 @@ window.addEventListener('load',()=>{
                 crossout();
             })
         }
-            
+        function deleteSound(){
+            let audio=new Audio('dry-erase-78299-[AudioTrimmer.com].mp3');
+            audio.loop=false;
+            audio.play();
+        }    
 
         task_delete_el.addEventListener('click',()=>{
             complete_el.removeChild(task_el);
+            deleteSound();
             
         })
 
