@@ -29,8 +29,9 @@ body{
 header{
     padding:2rem 1rem;
     max-width:500px;
-    width:100%;
+    width:fit-content;
     margin: 0 auto;
+
 }
 header h1{
     font-size: 50px;
@@ -71,13 +72,15 @@ input,button{
     cursor:pointer;
     transition:0.4s;
     margin-top: 30px;
-    margin-right: 50px;
+
+  
     nav-left: 20px;
     /* border: solid; */
     
 }
 #submit-input:hover{
 opacity:0.6;
+
 }
 #submit-input:active{
     opacity:0.8;
@@ -99,8 +102,7 @@ main{
 
 .task-list{
     padding:1rem;
- 
-    
+
 }
 .task-list h2{
     font-size: 1.5rem;
@@ -111,28 +113,29 @@ main{
 }
 #tasks .task {
     display:flex;
-    
+    justify-content: space-evenly;
     /* background-color: honeydew; */
     padding: 2px;
     border-radius: 1rem;
     /* border: solid; */
-    color:black;
+    color:rgb(12, 9, 9);
     margin-top: 25px;
     margin-bottom: 28px;
-    /* border: solid; */
-    width: 90%;
+    
 }
 
 #tasks .task .content .text{
     color: rgb(79, 77, 77);
     font-size: 30px;
-    width: 100%;
-    display:block;
+    max-width: 120%;
+    display:inline-block;
     transition:0.4s;
     font-family:'Pencil','Courier New';
+    margin-right: 20px;
     /* border: solid; */
+    
+} 
 
-}
 
 #tasks .task .content .text:not(:read-only){
 
@@ -141,12 +144,14 @@ font-family: Arial, Helvetica, sans-serif;
 font-size: large;
 
 }
-
+#tasks .task .content{
+    justify-content: space-evenly;
+}
 #tasks .task .action{
     display:inline-flex;
-    margin:0,-0.5rem;
     transition: 0.4s;
-
+    justify-content: space-evenly;
+    margin-left: 10px;
 }
 
 .task .action img{
@@ -172,13 +177,14 @@ font-size: large;
 }
 .task .action .edit:active{
     opacity:0.8;
+    
 }
 
 
 .task .action .X:hover{
     
     opacity:0.6;
-  
+    
 }
 .task .action .X:active{
     
@@ -188,6 +194,7 @@ font-size: large;
 .task .action .edit{
     margin-bottom: 5px;
     margin-left: 5px;
+   
 }
 
 .task .action .X{
