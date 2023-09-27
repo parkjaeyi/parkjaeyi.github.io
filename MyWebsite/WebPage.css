@@ -29,6 +29,7 @@ header{
     max-width:500px;
     width:fit-content;
     margin: 0 auto;
+   
 
 }
 header h1{
@@ -59,7 +60,7 @@ input{
     font-size: 1.25rem;
     font-family:'Pencil','Courier New';
     font-size:25px;
-    
+    margin-top: 50px;
     /* border: solid; */
 }
 #task-input::placeholder{
