@@ -29,7 +29,6 @@ header{
     max-width:500px;
     width:fit-content;
     margin: 0 auto;
-   
 
 }
 header h1{
@@ -182,9 +181,10 @@ main{
     border: solid;
     color:rgb(12, 9, 9);
     margin-top: 25px;
-    margin-bottom: 28px;
+    margin-bottom: 30px;
     padding-left: 2px;
     margin-left: 100px;
+
 
 }
 #tasks .task .content .text{
