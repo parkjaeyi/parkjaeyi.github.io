@@ -29,7 +29,7 @@ header{
     max-width:500px;
     width:fit-content;
     margin: 0 auto;
-
+    /* border: solid; */
 }
 header h1{
     font-size: 50px;
@@ -61,7 +61,7 @@ input{
     font-size:25px;
     margin-top: 66px;
     /* border: solid; */
-    width: 64%;
+    width: 63%;
 }
 #task-input::placeholder{
     margin-top: 20px;
@@ -161,7 +161,8 @@ main{
     border: inset;
 }
 .date{
-    margin-left:10px;
+    /* margin-left:10px; */
+    display: flex;
 }
 .task-list{
     padding:1rem;
