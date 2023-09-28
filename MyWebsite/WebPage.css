@@ -29,7 +29,7 @@ header{
     max-width:500px;
     width:fit-content;
     margin: 0 auto;
-    /* border: solid; */
+
 }
 header h1{
     font-size: 50px;
@@ -61,7 +61,6 @@ input{
     font-size:25px;
     margin-top: 66px;
     /* border: solid; */
-    width: 63%;
 }
 #task-input::placeholder{
     margin-top: 20px;
@@ -161,8 +160,7 @@ main{
     border: inset;
 }
 .date{
-    /* margin-left:10px; */
-    display: flex;
+    margin-left:10px;
 }
 .task-list{
     padding:1rem;
@@ -262,7 +260,7 @@ font-size: large;
     border-radius: 5px;
     padding-right:10px;
     margin-right: 1px;
-    margin-left: 195px;
+    margin-left: 158px;
     background-color: red;
     box-shadow: 0px 0px;
     margin-bottom: 5px;
@@ -343,7 +341,7 @@ font-size: large;
     display: flex;
     transition:0.4s;
     font-family:'Pencil','Courier New';
-    max-width: 200px;
+    max-width: 250px;
     
 
 }
