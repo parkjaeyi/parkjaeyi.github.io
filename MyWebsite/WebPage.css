@@ -61,6 +61,7 @@ input{
     font-size:25px;
     margin-top: 66px;
     /* border: solid; */
+    width: 64%;
 }
 #task-input::placeholder{
     margin-top: 20px;
