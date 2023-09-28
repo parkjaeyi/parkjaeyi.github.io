@@ -10,19 +10,26 @@
 body{
     display:flex;
     flex-direction: column;
-    min-height: 100px;
     background: rgb(245, 243, 156);
     color: black;
     font-family: 'Pencil', sans-serif;
     background-image: url(looseleaf5.jpg);
-    background-repeat: no-repeat; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     
+    
+}
+#textImage-border{
+    vertical-align: baseline;
 }
 header{
     padding:2rem 1rem;
     max-width:500px;
-    width:100%;
+    width:fit-content;
     margin: 0 auto;
+
 }
 header h1{
     font-size: 50px;
@@ -34,42 +41,45 @@ header h1{
 #task-form{
     display: flex;
     margin-right: 0;
+    margin-bottom: 0;
     
 }
-input,button{
+input{
     appearance: none;
     border:none;
     outline: none;
     background: none;
+   
 }
 
 
 #task-input{
     flex:1 1 0%;
-    margin-top:28px; 
+    margin-top:10px; 
     font-size: 1.25rem;
+    font-family:'Pencil','Courier New';
+    font-size:25px;
+    margin-top: 66px;
+    /* border: solid; */
+}
+#task-input::placeholder{
+    margin-top: 20px;
+    color: grey;
     font-family:'Pencil','Courier New';
     font-size:25px;
     /* border: solid; */
 }
-#task-input::placeholder{
-    color: grey;
-    font-family:'Pencil','Courier New';
-    font-size:25px;
-}
 #submit-input{
     cursor:pointer;
     transition:0.4s;
-    margin-top: 19px;
-    
-    padding-right: 130px;
-    margin-right: 50px;
+    margin-top: 30px;
     nav-left: 20px;
     /* border: solid; */
     
 }
 #submit-input:hover{
 opacity:0.6;
+
 }
 #submit-input:active{
     opacity:0.8;
@@ -81,17 +91,79 @@ main{
     min-height: 100px;
     color: gray;
     flex:1 1 0%;
-    max-width: 500px;
+    max-width: 550px;
     width: 100%;
     margin: 0 auto;
-    
-    
+    vertical-align: baseline;
    
 }
 
+.colourbutton {
+    border: solid;
+    border-radius: 5px;
+    padding-right:10px;
+    margin-right: 1px;
+    margin-left: 30px;
+    background-color: red;
+    box-shadow: 0px 0px;
+    margin-bottom: 5px;
+    align-items: center;
+}
+.colourbutton:hover{
+    cursor: pointer;
+    opacity:0.9;
+    transition:0.4s;
+    
+}
+.colourbutton:active{
+    opacity:0.8;
+    border: inset;
+}
+.colourbutton2 {
+    border: solid;
+    box-shadow: 0px 0px;
+    border-radius: 5px;
+    padding-right:10px;
+    margin-right: 1px;
+    margin-left: 0px;
+    background-color: orange;
+    margin-bottom: 5px;
+}
+.colourbutton2:hover{
+    cursor: pointer;
+    opacity:1;
+    transition:0.4s;
+    
+}
+.colourbutton2:active{
+    opacity:0.8;
+    border: inset;
+}
+.colourbutton3 {
+    border: solid;
+    box-shadow: 0px 0px;
+    border-radius: 5px;
+    padding-right:10px;
+    margin-right: 2px;
+    margin-left: 0px;
+    background-color: aqua;
+    margin-bottom: 5px;
+}
+.colourbutton3:hover{
+    cursor: pointer;
+    opacity:0.9;
+    transition:0.4s;
+    
+}
+.colourbutton3:active{
+    opacity:0.8;
+    border: inset;
+}
+.date{
+    margin-left:10px;
+}
 .task-list{
     padding:1rem;
-    
     
 }
 .task-list h2{
@@ -103,26 +175,31 @@ main{
 }
 #tasks .task {
     display:flex;
-    
     /* background-color: honeydew; */
-    padding: 2px;
+    /* padding: 2px; */
     border-radius: 1rem;
-    /* border: solid; */
-    color:black;
+    border: solid;
+    color:rgb(12, 9, 9);
     margin-top: 25px;
-    margin-bottom: 28px;
-    
-}
+    margin-bottom: 30px;
+    padding-left: 2px;
+    margin-left: 100px;
 
+
+}
 #tasks .task .content .text{
     color: rgb(79, 77, 77);
     font-size: 30px;
-    width: 100%;
-    display:block;
+    display:flex;
     transition:0.4s;
     font-family:'Pencil','Courier New';
+    max-width: fit-content;
+    
+  
+    
+} 
 
-}
+
 
 #tasks .task .content .text:not(:read-only){
 
@@ -132,27 +209,16 @@ font-size: large;
 
 }
 
+
+#tasks .task .content{
+    justify-content: space-evenly;
+    
+}
 #tasks .task .action{
-    display:flex;
-    margin:0,-0.5rem;
+    display:inline-flex;
     transition: 0.4s;
+    margin-left: 10px;
 }
-
-.task .action img{
-    cursor:pointer;
-    margin:0rem;
-    font-size: 1.125rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    transition: 0.4s;
-}
-
-/* .task .action img:hover{
-    opacity:0.6;
-    }
-.task .action img:active{
-    opacity:0.8;
-} */
 
 /*Icon Buttons*/
 .task .action .edit:hover{
@@ -161,13 +227,14 @@ font-size: large;
 }
 .task .action .edit:active{
     opacity:0.8;
+    
 }
 
 
 .task .action .X:hover{
     
     opacity:0.6;
-  
+    
 }
 .task .action .X:active{
     
@@ -176,11 +243,145 @@ font-size: large;
 }
 .task .action .edit{
     margin-bottom: 5px;
+    margin-left: 10px;
+    padding-left: 5px;
+   
 }
 
 .task .action .X{
     margin-bottom: 5px;
-    padding-left: 20px;
+    padding-left: 5px;
+    
+}
+
+/* task1 (task w/o dates)*/
+.T1colourbutton {
+    border: solid;
+    border-radius: 5px;
+    padding-right:10px;
+    margin-right: 1px;
+    margin-left: 195px;
+    background-color: red;
+    box-shadow: 0px 0px;
+    margin-bottom: 5px;
+    align-items: center;
+}
+.T1colourbutton:hover{
+    cursor: pointer;
+    opacity:0.9;
+    transition:0.4s;
+    
+}
+.T1colourbutton:active{
+    opacity:0.8;
+    border: inset;
+}
+.T1colourbutton2 {
+    border: solid;
+    box-shadow: 0px 0px;
+    border-radius: 5px;
+    padding-right:10px;
+    margin-right: 1px;
+    margin-left: 0px;
+    background-color: orange;
+    margin-bottom: 5px;
+}
+.T1colourbutton2:hover{
+    cursor: pointer;
+    opacity:1;
+    transition:0.4s;
+    
+}
+.T1colourbutton2:active{
+    opacity:0.8;
+    border: inset;
+}
+.T1colourbutton3 {
+    border: solid;
+    box-shadow: 0px 0px;
+    border-radius: 5px;
+    padding-right:10px;
+    margin-right: 2px;
+    margin-left: 0px;
+    background-color: aqua;
+    margin-bottom: 5px;
+}
+.T1colourbutton3:hover{
+    cursor: pointer;
+    opacity:0.9;
+    transition:0.4s;
+    
+}
+.T1colourbutton3:active{
+    opacity:0.8;
+    border: inset;
+}
+#tasks .task1 {
+    display:flex;
+    /* background-color: honeydew; */
+    border-radius: 1rem;
+    border: solid;
+    color:rgb(12, 9, 9);
+    margin-top: 25px;
+    margin-bottom: 28px;
+    max-width: 430px;
+    padding-left: 2px;
+/* 
+    max-width: 400px;*/
+    margin-left: 100px; 
+}
+#tasks .task1 .action{
+    display:inline-flex;
+    transition: 0.4s;
+    margin-left: 10px;
+}
+#tasks .task1 .content .text{
+    color: rgb(79, 77, 77);
+    font-size: 30px;
+    display: flex;
+    transition:0.4s;
+    font-family:'Pencil','Courier New';
+    max-width: 200px;
+    
+
+}
+#tasks .task1 .content .text:not(:read-only){
+
+color: black;
+font-family: Arial, Helvetica, sans-serif;
+font-size: large;
+
+}
+.task1 .action .edit:hover{
+    opacity:0.6;
+    
+}
+.task1 .action .edit:active{
+    opacity:0.8;
+    
+}
+
+
+.task1 .action .X:hover{
+    
+    opacity:0.6;
+    
+}
+.task1 .action .X:active{
+
+    opacity:0.8;
+ 
+}
+.task1 .action .edit{
+    margin-bottom: 5px;
+    margin-left: 10px;
+    padding-left: 5px;
+   
+}
+
+.task1 .action .X{
+    margin-bottom: 5px;
+    
     
 }
 
@@ -194,6 +395,7 @@ h3{ /*Title: Completed*/
 
 .complete{
     box-shadow:100px,20px;
+    
 }  
 .complete-border{
     border: solid;
@@ -207,6 +409,7 @@ h3{ /*Title: Completed*/
     position: fixed;
     margin-top: 100px;
     box-shadow: 20px,20px, 1000px;
+    margin-left:100px;
    
 }
 
@@ -222,6 +425,26 @@ h3{ /*Title: Completed*/
     
 }
 #c-tasks .task .content .text{
+    color: black;
+    font-size: 2rem;
+    font-family: 'Pencil', sans-serif;
+    width: 100%;
+    display:block;
+    transition:0.4s;
+   
+}
+#c-tasks .task1{
+    display:flex;
+    justify-content: space-between;
+    background-color: lightgreen;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    color:black;
+    margin:10px;
+    
+}
+#c-tasks .task1 .content .text{
     color: black;
     font-size: 2rem;
     font-family: 'Pencil', sans-serif;
