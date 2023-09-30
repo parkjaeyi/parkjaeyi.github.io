@@ -160,7 +160,7 @@ main{
     border: inset;
 }
 .date{
-    margin-left:10px;
+    margin-right:10px;
 }
 .task-list{
     padding:1rem;
