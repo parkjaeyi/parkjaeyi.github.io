@@ -103,8 +103,8 @@ main{
     border: solid;
     border-radius: 5px;
     padding-right:10px;
-    margin-right: 1px;
-    margin-left: 30px;
+    /* margin-right: 1px; */
+    margin-left: 15px;
     background-color: red;
     box-shadow: 0px 0px;
     margin-bottom: 5px;
@@ -160,9 +160,10 @@ main{
     opacity:0.8;
     border: inset;
 }
-.date{
-    margin-right:10px;
-}
+/* .date{
+    
+    border: solid;
+} */
 .task-list{
     padding:1rem;
     
