@@ -126,7 +126,7 @@ main{
     border-radius: 5px;
     padding-right:10px;
     margin-right: 1px;
-    margin-left: 0px;
+    margin-left: 1px;
     background-color: orange;
     margin-bottom: 5px;
 }
@@ -252,7 +252,7 @@ font-size: large;
 
 .task .action .X{
     margin-bottom: 5px;
-    padding-left: 5px;
+    /* padding-left: 2px; */
     
 }
 
