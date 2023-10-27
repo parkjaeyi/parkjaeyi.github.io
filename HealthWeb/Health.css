@@ -1,0 +1,12 @@
+title{
+    display:flex;
+   flex-direction: column;
+   display: inline-flex;
+   min-height: 100px;
+   color: gray;
+   flex:1 1 0%;
+   max-width: 550px;
+   width: 100%;
+   margin: 0 auto;
+   vertical-align: baseline;
+}
