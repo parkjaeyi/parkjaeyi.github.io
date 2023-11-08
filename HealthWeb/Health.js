@@ -12,3 +12,9 @@ function showMenu(){
 function hideMenu(){
     navLinks.style.display="none";
 }
+document.getElementById("signIn").addEventListener("click",()=>{
+    document.querySelector(".popup").style.display="flex";
+})
+document.querySelector(".close").addEventListener("click",()=>{
+    document.querySelector(".popup").style.display="none";
+})
