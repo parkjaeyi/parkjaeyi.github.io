@@ -293,6 +293,7 @@
     min-height: 100vh; /* Set a minimum height to ensure the footer stays at the bottom */
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 .navLinks2{
   flex: 1;
@@ -678,8 +679,26 @@
 
   pointer-events: none;
 }
+.exercise-content{
+  justify-content: center; /* Center along the horizontal axis */
+    align-items: center; 
+}
 
-
+#arms,#legs,#torso,#back {
+  background-color: #f4f4f4;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+ 
+}
+#arm-title,#leg-title,#torso-title,#back-title{
+  font-size: larger;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: center;
+}
 
 /*selection animation*/
 .highlighted {
