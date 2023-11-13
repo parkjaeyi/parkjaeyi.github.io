@@ -133,5 +133,47 @@
                 <a href="#"><button id="Login" >Login</button></a>
             </div>
         </div> 
+
+    
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+           const areas = document.querySelectorAll('map area');
+   
+           areas.forEach(area => {
+               area.addEventListener('click', () => {
+                   const sectionId = area.getAttribute('href').substring(1); 
+                   highlightSection(sectionId);
+               });
+           });
+   
+           function highlightSection(sectionId) {
+               const sections = document.querySelectorAll('section');
+               sections.forEach(section => {
+                   section.classList.remove('highlighted');
+               });
+   
+               const selectedSection = document.getElementById(sectionId);
+               if (selectedSection) {
+                   selectedSection.classList.add('highlighted');
+               }
+           }
+       });
+       
+      
+       </script>
+       <style>
+           .highlighted {
+               animation: blink 1s; 
+           }
+   
+           @keyframes blink {
+               from,to {
+                   background-color: white; 
+               }
+               50% {
+                   background-color: rgba(233, 229, 229, 0.719); 
+               }
+           }
+       </style>
 </body>
 </html>
