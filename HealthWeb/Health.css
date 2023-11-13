@@ -411,7 +411,10 @@
 
 
 /**********EXERCISE PAGE*****************/
-
+#image-container {
+  position: relative;
+ 
+}
 
 .body-image{
   display:grid;
@@ -419,7 +422,7 @@
   margin-right: auto;
   width: 450px;
   height: 450px;
-  
+  position: relative;
   }
   
   /* #box{
@@ -435,12 +438,25 @@
     height: 700px;
   } */
   /**/
-.overlaytorso {
+  
+#overlaytorso {
   position: absolute;
-  top:250px;
-  left:813px;
+ 
+  top: 50%;
+  left: 50%;
+  transform: translate(-140px, -100%);
+  /* top:250px;
+  left:813px; */
   width:80px;
   height: 150px;
+ 
+ 
+  /* top: 20%; 
+  left: 25%;  */
+  /* top: calc(15% + 20px); 
+  left: calc(27% + 30px);
+  width: 80px; 
+  height: 140px; */
  
 }
 
@@ -459,11 +475,13 @@
 /**/
 .overlayleftarm1 {
   position: absolute;
-  top:250px;
-  left:770px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-208px, -75%);
   width:35px;
   height: 150px;
   rotate:10deg;
+  
 
 }
 
@@ -483,12 +501,13 @@
 /**/
 .overlayrightarm1 {
   position: absolute;
-  top:250px;
-  left:898px;
+  top: 50%;
+  left: 50%;
+  transform: translate(15px, 100%); 
   width:35px;
   height: 150px;
   rotate:165deg;
- 
+
 }
 
 .overlayrightarm1:hover {
@@ -506,8 +525,9 @@
 /**/
 .overlayleftleg1 {
   position: absolute;
-  top:390px;
-  left:805px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-145px, -1%); 
   width:45px;
   height: 180px;
 }
@@ -525,9 +545,9 @@
 /**/
 #overlayrightleg1 {
   position: absolute;
-  top:390px;
-  left:855px;
-
+  top: 50%;
+  left: 50%;
+  transform: translate(-95px, -1%); 
   width:45px;
   height: 180px;
  
@@ -548,8 +568,9 @@
 /**/
 #overlayleftarm2 {
   position: absolute;
-  top:250px;
-  left:972px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-15px, -90%); 
   rotate:12deg;
   width:35px;
   height: 180px;
@@ -569,8 +590,9 @@
 /**/
 #overlayrightarm2 {
   position: absolute;
-  top:250px;
-  left:1090px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-175px, 70%); 
   rotate: 165deg;
   width:35px;
   height: 150px;
@@ -592,8 +614,9 @@
 /**/
 #overlayback {
   position: absolute;
-  top:250px;
-  left:1010px;
+  top: 50%;
+  left: 50%;
+  transform: translate(60px, -100%); 
   width:80px;
   height: 150px;
 ;
@@ -612,8 +635,9 @@
 /**/
 #overlayleftleg2 {
   position: absolute;
-  top:390px;
-  left:1008px;
+  top: 50%;
+  left: 50%;
+  transform: translate(55px, -10%); 
   width:45px;
   height: 180px;
 
@@ -634,8 +658,9 @@
 /**/
 #overlayrightleg2 {
   position: absolute;
-  top:390px;
-  left:1050px;
+  top: 50%;
+  left: 50%;
+  transform: translate(100px, -10%); 
   width:45px;
   height: 180px;
 
@@ -669,24 +694,22 @@
       background-color: rgba(233, 229, 229, 0.719); 
   }
 }
-.body-image {
+/* .body-image {
   display: block;
   max-width: 100%;
   height: auto;
-}
+} */
 
-#image-container {
-  position: relative;
-}
 
-#overlaytorso {
+
+/* #overlaytorso {
   position: absolute;
-  top: 20%; /* Adjust the top position percentage as needed */
-  left: 30%; /* Adjust the left position percentage as needed */
-  width: 40%; /* Adjust the width percentage as needed */
-  height: 30%; /* Adjust the height percentage as needed */
+  top: 20%; 
+  left: 30%; 
+  width: 40%; 
+  height: 30%;
   background-color: green;
   opacity: 0.7;
   pointer-events: none;
   transition: opacity 0.3s ease;
-}
+} */
