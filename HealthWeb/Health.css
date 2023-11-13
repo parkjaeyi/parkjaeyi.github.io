@@ -653,3 +653,40 @@
 
   pointer-events: none;
 }
+
+
+
+/*selection animation*/
+.highlighted {
+  animation: blink 1s; 
+}
+
+@keyframes blink {
+  from,to {
+      background-color: white; 
+  }
+  50% {
+      background-color: rgba(233, 229, 229, 0.719); 
+  }
+}
+.body-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+#image-container {
+  position: relative;
+}
+
+#overlaytorso {
+  position: absolute;
+  top: 20%; /* Adjust the top position percentage as needed */
+  left: 30%; /* Adjust the left position percentage as needed */
+  width: 40%; /* Adjust the width percentage as needed */
+  height: 30%; /* Adjust the height percentage as needed */
+  background-color: green;
+  opacity: 0.7;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
