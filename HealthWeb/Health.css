@@ -439,7 +439,7 @@
     height: 700px;
   } */
   /**/
-  
+.torsasdas
 #overlaytorso {
   position: absolute;
  
@@ -450,7 +450,7 @@
   left:813px; */
   width:80px;
   height: 150px;
- 
+  cursor: pointer;
  
   /* top: 20%; 
   left: 25%;  */
@@ -575,7 +575,7 @@
   rotate:12deg;
   width:35px;
   height: 180px;
-
+ 
 }
 
 #overlayleftarm2:hover {
@@ -682,6 +682,7 @@
 .exercise-content{
   justify-content: center; /* Center along the horizontal axis */
     align-items: center; 
+ 
 }
 
 #arms,#legs,#torso,#back {
