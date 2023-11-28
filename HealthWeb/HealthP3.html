@@ -35,6 +35,7 @@
 
     <section class="content">
         <!-- We put all the content in here-->
+        <p class="description">(Click on the body part that you want to exercise on!)</p>
         <div id="image-container">
             
             <img src="Muscles.png" usemap="#image_map" class='body-image'alt="human-body" id="body-image">
@@ -75,7 +76,7 @@
                     <area alt="rightleg2" title="rightleg2" href="#legs" coords="360.201,179.384 330.354,204.541 331.321,284.415 338.809,323.486 332.192,349.920 335.080,383.262 330.354,415.460 329.388,435.948 359.234,439.675 363.927,417.606 350.007,393.915 363.927,335.857 359.970,306.541 367.459,279.604 375.481,240.994 370.754,198.991 " shape="polygon">
                     
                     </map>
-                <!-- <div id="overlaytorso" class="overlaytorso"></div> -->
+                <div id="overlaytorso" class="overlaytorso" ></div>
                 <div id="overlayleftarm1" class="overlayleftarm1"></div>
                 <div id="overlayrightarm1" class="overlayrightarm1"></div>
                 <div id="overlayleftleg1" class="overlayleftleg1"></div>
@@ -85,135 +86,94 @@
                 <div id="overlayback" class="overlayback"></div>
                 <div id="overlayleftleg2" class="overlayleftleg2"></div>
                 <div id="overlayrightleg2" class="overlayrightleg2"></div>
-                <p class="description">(Click on the body part that you want to exercise on!)</p>
+                
         </div>
 
         <section id="exercise-content">
-
-    <section id="exercise-content">
-
-      
-
-        <section id="arms">
-            
-            <p id="arm-title">ARM EXERCISE</p>
-            <br><img src="arm.png" width="250" height="250">
-            <ul class="arm-exercises">
-                <li>bicep curls</li>
-                <li>hammer curls</li>
-                <li>Arnold press</li>
-                <li>Overhead cable curl</li>
-                <li>High plank</li>
-                <li>Concentration curls</li>
-            </ul>
-        </section>
-      
-        <section id="legs">
-            <p id="leg-title">LEGS EXERCISE</p>
-            <br><img src="leg.png" >
-            <ul class="leg-exercises">
-                <li>Squats</li>
-                <li>Lunges</li>
-                <li>Leg Press</li>
-                <li>Calf Raises</li>
-                <li>Leg Extensions</li>
-                <li>Leg Curls</li>
-            </ul>
-        </section>
-        <section id="torso">
-            <p id="torso-title">TORSO EXERCISE </p>
-            <br><img src="torso.png"width="250" height="250">
-            <ul class="torso-exercises">
-                <li>crunches</li>
-                <li>boat folds</li>
-                <li>flutter kicks</li>
-                <li>raised legs</li>
-                <li>push up</li>
-            </ul>
-        </section>
-        <section id="back">
-            <p id="back-title">BACK EXERCISE</p>
-            <br><img src="back.png"width="250" height="250">
-            <ul class="back-exercises">
-                <li>Lat Pulldowns</li>
-                <li>Deadlifts</li>
-                <li>Bent Over Rows</li>
-                <li>Hyperextensions (Back Extensions)</li>
-                <li>Face Pulls</li>
-                <li>Reverse Flyes</li>
-            </ul>
-        </section>
-          
-    
-
-
-    <section class="footer">
-        <nav class="footer-content">
-            <a href="index.html"><img src="healthLogo.png" alt="Logo" width="192" height="100.5"></a>
-            <div class="navLinks2" id="nav-links">
-                <!-- <i class="fa fa-times" ></i> -->
-
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="HealthP2.html">My Caloric Tracker</a></li>
-                    <li><a href="HealthP3.html">Exercise</a></li>
-                    <li><a href="HealthP4.html">About Us</a></li>
-                    
+        
+            <section id="arms">
+                
+                <p id="arm-title">ARM EXERCISE</p>
+                <br><img src="arm.png" width="250" height="250">
+                <ul class="arm-exercises">
+                    <li>bicep curls</li>
+                    <li>hammer curls</li>
+                    <li>Arnold press</li>
+                    <li>Overhead cable curl</li>
+                    <li>High plank</li>
+                    <li>Concentration curls</li>
                 </ul>
-            </div>
-            <!-- <i class="fa fa-bars" onclick="showMenu()"></i> -->
-        </nav>
-    </section>    
-        <div class="popup">
-            <div class="popup-content">
-                <img src="close.png" alt="" class="close" width="35px" height="35px">
-                <input type="text" placeholder="Username">
-                <input type="password" placeholder="Password">
-                <a href="#"><button id="Login" >Login</button></a>
-            </div>
-        </div> 
-    </section>
-    
-        <!-- <script>
-            document.addEventListener('DOMContentLoaded', () => {
-           const areas = document.querySelectorAll('map area');
-   
-           areas.forEach(area => {
-               area.addEventListener('click', () => {
-                   const sectionId = area.getAttribute('href').substring(1); 
-                   highlightSection(sectionId);
-               });
-           });
-   
-           function highlightSection(sectionId) {
-               const sections = document.querySelectorAll('section');
-               sections.forEach(section => {
-                   section.classList.remove('highlighted');
-               });
-   
-               const selectedSection = document.getElementById(sectionId);
-               if (selectedSection) {
-                   selectedSection.classList.add('highlighted');
-               }
-           }
-       });
-       
-      
-       </script> -->
-       <!-- <style>
-           .highlighted {
-               animation: blink 1s; 
-           }
-   
-           @keyframes blink {
-               from,to {
-                   background-color: white; 
-               }
-               50% {
-                   background-color: rgba(233, 229, 229, 0.719); 
-               }
-           }
-       </style> -->
+            </section> 
+        
+            <section id="legs">
+                <p id="leg-title">LEGS EXERCISE</p>
+                <br><img src="leg.png" >
+                <ul class="leg-exercises">
+                    <li>Squats</li>
+                    <li>Lunges</li>
+                    <li>Leg Press</li>
+                    <li>Calf Raises</li>
+                    <li>Leg Extensions</li>
+                    <li>Leg Curls</li>
+                </ul>
+            </section>
+
+            <section id="torso">
+                <p id="torso-title">TORSO EXERCISE </p>
+                <br><img src="torso.png"width="250" height="250">
+                <ul class="torso-exercises">
+                    <li>crunches</li>
+                    <li>boat folds</li>
+                    <li>flutter kicks</li>
+                    <li>raised legs</li>
+                    <li>push up</li>
+                </ul>
+            </section>
+
+            <section id="back">
+                <p id="back-title">BACK EXERCISE</p>
+                <br><img src="back.png"width="250" height="250">
+                <ul class="back-exercises">
+                    <li>Lat Pulldowns</li>
+                    <li>Deadlifts</li>
+                    <li>Bent Over Rows</li>
+                    <li>Hyperextensions (Back Extensions)</li>
+                    <li>Face Pulls</li>
+                    <li>Reverse Flyes</li>
+                </ul>
+            </section>
+            
+        
+        </section>
+
+        <section class="footer">
+            <nav class="footer-content">
+                <a href="index.html"><img src="healthLogo.png" alt="Logo" width="192" height="100.5"></a>
+                <div class="navLinks2" id="nav-links">
+                    <!-- <i class="fa fa-times" ></i> -->
+
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="HealthP2.html">My Caloric Tracker</a></li>
+                        <li><a href="HealthP3.html">Exercise</a></li>
+                        <li><a href="HealthP4.html">About Us</a></li>
+                        
+                    </ul>
+                </div>
+                <!-- <i class="fa fa-bars" onclick="showMenu()"></i> -->
+            </nav>
+        </section>    
+
+            <div class="popup">
+                <div class="popup-content">
+                    <img src="close.png" alt="" class="close" width="35px" height="35px">
+                    <input type="text" placeholder="Username">
+                    <input type="password" placeholder="Password">
+                    <a href="#"><button id="Login" >Login</button></a>
+                </div>
+            </div> 
+
+     
        
 </body>
 </html>

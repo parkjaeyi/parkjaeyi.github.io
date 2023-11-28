@@ -446,25 +446,19 @@
     height: 700px;
   } */
   /**/
-.torsasdas
+.torso:hover{
+  cursor: pointer;
+  color: green;
+}
 #overlaytorso {
   position: absolute;
- 
   top: 50%;
   left: 50%;
   transform: translate(-140px, -100%);
-  /* top:250px;
-  left:813px; */
   width:80px;
   height: 150px;
   cursor: pointer;
  
-  /* top: 20%; 
-  left: 25%;  */
-  /* top: calc(15% + 20px); 
-  left: calc(27% + 30px);
-  width: 80px; 
-  height: 140px; */
  
 }
 
