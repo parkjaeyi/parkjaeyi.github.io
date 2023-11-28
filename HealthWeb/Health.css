@@ -142,6 +142,7 @@
     }
       
     .navLinks{
+      position: relative;
       flex: 1;
       text-align: right;
     }
@@ -161,6 +162,7 @@
     }
       
     .navLinks ul li::after {
+      position: absolute;
       content: '';
       width: 0%;
       height: 2px;
@@ -180,6 +182,7 @@
   
   .navLinks button { /*Sign up button*/
     display: inline-block;
+
     text-decoration: none;
     color: rgb(0, 0, 0);
     border: rgb(0, 200, 255);
@@ -290,8 +293,8 @@
   body {
     margin: 0;
     padding: 0;
-    min-height: 100vh; /* Set a minimum height to ensure the footer stays at the bottom */
-    display: flex;
+    min-height: 100vh; 
+    display:flex;
     flex-direction: column;
     align-items: center;
 }
@@ -340,9 +343,13 @@
 }
 
  .header{
+  position: relative;
+  display: block;
+  flex-direction: row;
   padding-top: 5px;
   color: #000000;
   font-size: 30px;
+  width: 100%;
   /* line-height: 50px; */
 }
 
@@ -681,17 +688,30 @@
 }
 .exercise-content{
   justify-content: center; /* Center along the horizontal axis */
+
     align-items: center; 
  
-}
 
+  align-items: center; 
+}
+.arm-exercises,.leg-exercises,.torso-exercises,.back-exercises{
+  text-align: left;
+
+}
 #arms,#legs,#torso,#back {
+  display: block;
   background-color: #f4f4f4;
   padding: 20px;
   margin: 10px;
   border-radius: 8px;
-  width: 300px;
+  position:relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 350px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  text-align: center;
   
  
 }
@@ -699,8 +719,11 @@
   font-size: larger;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   text-align: center;
+  align-items: center;
 }
-
+.description{
+  text-align: center;
+}
 /*selection animation*/
 .highlighted {
   animation: blink 1s; 
