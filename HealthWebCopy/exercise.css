@@ -1,0 +1,359 @@
+/*Login*/
+.popup{
+  background: rgba(0, 0,0,0.6);
+  backdrop-filter: blur(3px);
+  width:100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.popup-content{
+  height: 250px;
+  width: 500px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  position: relative;
+}
+input{
+  margin: 20px auto;
+  display: block;
+  width: 50%;
+  padding: 8px;
+  border: 1px solid gray;
+}
+#Login{ 
+  position: absolute;
+  background: white;
+  padding: 10px 50px;
+  color: black;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 18px;
+  border-radius: 5px;
+  box-shadow: 0px 0px;
+  margin-top: 10px;
+  text-decoration: none;
+  transition: 0.4s;
+  bottom: 25px; 
+  right: 20px;
+  
+}
+#Login:hover{
+  background-color: lightblue;
+}
+.popup-close{
+  position: absolute;
+  background-color: #fff;
+  top: -15px;
+  right: -15px;
+  border-radius: 50%;
+  box-shadow: 6px 2px 29px 4px rgba(0, 0,0,0.75);
+  cursor: pointer;
+}
+.popup-close:hover{
+  background: red;
+}
+
+
+
+
+/*******/
+#image-container {
+  position: relative;
+ 
+}
+
+.body-image{
+  display:grid;
+  margin-left:auto;
+  margin-right: auto;
+  width: 450px;
+  height: 450px;
+  position: relative;
+  }
+
+  
+#overlaytorso {
+  position: absolute;
+ 
+  top: 50%;
+  left: 50%;
+  transform: translate(-140px, -100%);
+
+  width:80px;
+  height: 150px;
+ 
+}
+
+.overlaytorso:hover {
+  background: green;
+  opacity: 0.4;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+.overlaytorso:hover:after{
+  pointer-events: none;
+}
+
+
+/**/
+.overlayleftarm1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-208px, -75%);
+  width:35px;
+  height: 150px;
+  rotate:10deg;
+  
+
+}
+
+.overlayleftarm1:hover {
+  background: green;
+  opacity: 0.4;
+  cursor: pointer;
+
+  pointer-events: none;
+}
+
+.overlayleftarm1:hover:after{
+
+  pointer-events: none;
+}
+
+/**/
+.overlayrightarm1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(15px, 100%); 
+  width:35px;
+  height: 150px;
+  rotate:165deg;
+
+}
+
+.overlayrightarm1:hover {
+  background: green;
+  opacity: 0.4;
+  cursor: pointer;
+ 
+  pointer-events: none;
+}
+
+.overlayrightarm1:hover:after{
+
+  pointer-events: none;
+}
+/**/
+.overlayleftleg1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-145px, -1%); 
+  width:45px;
+  height: 180px;
+}
+
+.overlayleftleg1:hover {
+  background: green;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.overlayleftleg1:hover:after{
+
+  pointer-events: none;
+}
+/**/
+#overlayrightleg1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-95px, -1%); 
+  width:45px;
+  height: 180px;
+ 
+}
+
+#overlayrightleg1:hover {
+  background: green;
+  opacity: 0.4;
+  cursor: pointer;
+ 
+  pointer-events: none;
+}
+
+#overlayrightleg1:hover:after{
+
+  pointer-events: none;
+}
+/**/
+#overlayleftarm2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-15px, -90%); 
+  rotate:12deg;
+  width:35px;
+  height: 180px;
+
+}
+
+#overlayleftarm2:hover {
+  background: green;
+  opacity: 0.4;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+#overlayleftarm2:hover:after{
+  pointer-events: none;
+}
+/**/
+#overlayrightarm2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-175px, 70%); 
+  rotate: 165deg;
+  width:35px;
+  height: 150px;
+
+}
+
+#overlayrightarm2:hover {
+  background: green;
+  opacity: 0.4;
+  cursor: pointer;
+ 
+  pointer-events: none;
+}
+
+#overlayrightarm2:hover:after{
+
+  pointer-events: none;
+}
+/**/
+#overlayback {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(60px, -100%); 
+  width:80px;
+  height: 150px;
+;
+}
+
+#overlayback:hover {
+  background: green;
+  opacity: 0.4;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+#overlayback:hover:after{
+  pointer-events: none;
+}
+/**/
+#overlayleftleg2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(55px, -10%); 
+  width:45px;
+  height: 180px;
+
+}
+
+#overlayleftleg2:hover {
+  background: green;
+  opacity: 0.4;
+  cursor: pointer;
+ 
+  pointer-events: none;
+}
+
+#overlayleftleg2:hover:after{
+
+  pointer-events: none;
+}
+/**/
+#overlayrightleg2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(100px, -10%); 
+  width:45px;
+  height: 180px;
+
+}
+
+#overlayrightleg2:hover {
+  background: green;
+  opacity: 0.4;
+  cursor: pointer;
+ 
+  pointer-events: none;
+}
+
+#overlayrightleg2:hover:after{
+
+  pointer-events: none;
+}
+.exercise-content{
+ 
+  justify-content: center; /* Center along the horizontal axis */
+  align-items: center; 
+  
+}
+
+#arms,#legs,#torso,#back {
+  display: block;
+  background-color: #f4f4f4;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  position:relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  text-align: center;
+ 
+}
+.arm-exercises,.leg-exercises,.torso-exercises,.back-exercises{
+  text-align: left;
+}
+#arm-title,#leg-title,#torso-title,#back-title{
+  font-size: 30px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: center;
+  align-items: center;
+  
+}
+
+.description{
+  text-align: center;
+}
+/*selection animation*/
+.highlighted {
+  animation: blink 1.5s; 
+}
+
+@keyframes blink {
+  from,to {
+      background-color: white; 
+  }
+  50% {
+      background-color: rgba(136, 134, 134, 0.719); 
+  }
+}

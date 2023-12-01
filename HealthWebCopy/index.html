@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome!</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <script src="mobileMenu.js" defer></script>
+    <link rel="stylesheet" href="main.css"/>
+    <link rel="stylesheet" href="home.css">
+
+
+</head>
+<body>
+
+    <section class="header">
+        <nav>
+            <a class="logo" href="index.html"><img src="images/healthLogo.png" alt="Logo" width="192" height="100.5"></a>
+            <div class="navLinks" id="nav-links">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="myCalorieTracker.html">My Calorie Tracker</a></li>
+                    <li><a href="exercise.html">Exercise</a></li>
+                    <li><a href="aboutUs.html">About Us</a></li>
+                    <a href="#"><button id="signIn" onclick="">Sign In</button></a>
+
+
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+    </section>
+
+
+
+    <section class="content">
+
+        <br>
+        <br>
+    <div class="flex1">
+        <div><p>"If we all did the things we are capable of doing we would literally astound ourselves" - Thomas A. Edison</p></div>
+        <div><IMG SRC="images/gif1.gif"></div>
+    </div>
+        <hr>
+    
+    
+    <div class="why_us_circles"><div>Why Us?</div><div>What can you do with this?</div><div>Future Expansion</div></div>   
+    <br>
+    <br>
+    <h3>&emsp; &emsp; &emsp; &emsp; &emsp; Why us?</h3>
+
+    <div class="flex2">
+    <div><IMG SRC="images/gif2.gif"> </div>
+    <div><p>The best part about this app is what makes it unique, which is the fact that most companies include a paid subscription to access extra tools within their apps. Ours is completely free, in the sense that it is covered by sponsors and advertisements, so there is no need for someone who could be making minimum wage, to have to spend money every month on an app when it can be used on more important things like rent or food, or his kids.</p></div>
+    </div>                <!-- could not figure xout how to do - resolved -->
+
+  </div>
+    
+    <hr>
+    
+    <h3> What can you do with this? </h3>
+
+    <div class = "flex3">
+    <div><p>Our app is dedicated to promoting fitness and sending out reminders to ensure that meals are being eaten properly. This app will contain reminders to make sure that your water and food intake is being done properly, and even recommends him some meals that are creative and just as effectiveto make. </p></div>
+    <div><img src = "images/gif3.gif"></div> 
+    </div> <!-- could not figure xout how to make a cutoff line for the text before going to another line - resolved -->
+    
+    <hr>
+    <h3>Future Expansion</h3>
+    <div class = "flex4">
+    <div><img src = "images/gif4.gif"></div>
+    <div><P>This is intended to become an app one day, taking advantage of the mobility and ease of access to those with phones and watches to assist them in achieving their dietary goals.</P></div>
+    </div>
+    </section>  
+    
+    
+    <footer>
+        <nav class="footer-content">
+            <a href="index.html"><img src="images/healthLogo.png" alt="Logo" width="192" height="100.5"></a>
+            <div class="navLinks2" id="nav-links">
+                <!-- <i class="fa fa-times" ></i> -->
+
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="myCalorieTracker.html">My Calorie Tracker</a></li>
+                    <li><a href="exercise.html">Exercise</a></li>
+                    <li><a href="aboutUs.html">About Us</a></li>
+                    
+                </ul>
+            </div>
+            <!-- <i class="fa fa-bars" onclick="showMenu()"></i> -->
+        </nav>
+    </footer>
+    <div class="popup">
+        <div class="popup-content">
+            <img src="./images/close.png" alt="" class="popup-close" width="35px" height="35px">
+            <input type="text" placeholder="Username">
+            <input type="password" placeholder="Password">
+            <a href="#"><button id="Login" >Login</button></a>
+        </div>
+    </div> 
+</body>
+</html>
