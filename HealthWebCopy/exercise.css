@@ -62,6 +62,14 @@ input{
 
 
 /*******/
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover{
+  color: royalblue;
+}
 #image-container {
   position: relative;
  
