@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartoon</title>
+    <script  src="cartoon.js"></script>
+    <link ref="stylesheet" href="cartoon.css">
+</head>
+<body id="body" style="position: center; padding: 0; margin-top: 5%; margin-left: 275px;">
+    <div id="bodybackground" > <!--w/ mountian-->
+         <canvas id="Canvas" width="1000" height="600" style="border:1px solid #000000;position:absolute"></canvas>
+    </div>
+    <!-- <div id="mountain">
+        <canvas id="mountainCanvas"width="1000" height="600" style="border:1px solid #000000;position:absolute"></canvas>
+    </div> -->
+   <div id="ground"  >
+    <canvas id="Canvas2" width="1000" height="400" style="position:absolute;transform: translate(0, 200px);"></canvas>
+   </div>
+   <div id="house">
+    <canvas id="Canvas3" width="1000" height="400" style="position:absolute;transform: translate(0, 200px);"></canvas>
+   </div>
+    
+    <script language="JavaScript">
+        const myCanvas=document.getElementById("Canvas"); //contains boat, mountain, cloud
+        //draws anything on the canvas  
+        const pencil=myCanvas.getContext("2d");
+
+       //canvas 2 is the ground
+        
+        //canvas 3 is above the ground
+        const Canvas3=document.getElementById("Canvas3");//contains lake,maybe animal, and trees
+        const roof=Canvas3.getContext("2d");
+        const pencil2=Canvas3.getContext("2d");
+
+//creating shadows
+        pencil.beginPath();
+        pencil.fillStyle="#8CACB7";
+        pencil.moveTo(0,0);
+        pencil.lineTo(340,0);
+        pencil.lineTo(0,500);
+        pencil.closePath();
+        pencil.fill();
+        
+        
+//creating darker clouds
+
+        pencil.beginPath();
+        pencil.fillStyle="#4D4846";
+        pencil.arc(30, 50, 60, 0, Math.PI * 2);
+        pencil.arc(100, 50, 60, 0, Math.PI * 2);
+        pencil.fill();
+        pencil.closePath();
+
+        pencil.beginPath();
+        pencil.fillStyle="#4D4846";
+        pencil.arc(210,0, 100, 0, Math.PI * 2);
+        pencil.arc(290,40, 30, 0, Math.PI * 2);
+        pencil.fill();
+        pencil.closePath();
+
+        pencil.beginPath();
+        pencil.fillStyle="#4D4846";
+        pencil.arc(330,10, 30, 0, Math.PI * 2);
+        pencil.fill();
+        pencil.closePath();
+
+//creating cloud1
+        pencil.beginPath();
+        pencil.fillStyle="grey";
+        pencil.arc(0, 50, 60, 0, Math.PI * 2);
+        pencil.arc(70, 50, 60, 0, Math.PI * 2);
+        pencil.fill();
+        pencil.closePath();
+
+        pencil.beginPath();
+        pencil.fillStyle="grey";
+        pencil.arc(180,0, 100, 0, Math.PI * 2);
+        pencil.arc(260,40, 30, 0, Math.PI * 2);
+        pencil.fill();
+        pencil.closePath();
+
+        pencil.beginPath();
+        pencil.fillStyle="grey";
+        pencil.arc(300,10, 30, 0, Math.PI * 2);
+        pencil.fill();
+        pencil.closePath();
+
+
+//detail for cloud1
+        //stroke lines
+        pencil.beginPath();
+        pencil.arc(90, 40, 30, 1.5, Math.PI);//bezierCurveTo(45,80,80,100,100,70);
+        pencil.stroke();
+        pencil.closePath();
+
+        pencil.beginPath();
+        pencil.arc(240, 0, 30, 0, Math.PI*0.5);
+        pencil.stroke();
+        pencil.closePath();
+
+
+        
+//creating the sun
+        pencil.beginPath();
+        pencil.arc(860,80, 50, 0, Math.PI * 2); 
+        pencil.fillStyle = '#FFEB3B'; 
+        pencil.closePath();
+        pencil.fill();
+
+        pencil.beginPath();
+        pencil.fillStyle = '#FFFFFF';
+        pencil.arc(740, 50, 20, 0, Math.PI * 2);// cloud2
+        pencil.arc(800, 50, 20, 0, Math.PI * 2);
+        pencil.arc(770, 50, 30, 0, Math.PI * 2);
+        pencil.fill();
+        pencil.closePath();
+
+        pencil.beginPath();
+        pencil.fillStyle = '#FFFFFF';
+        pencil.arc(980, 10, 20, 0, Math.PI * 2);// cloud3
+        pencil.arc(920, 10, 20, 0, Math.PI * 2);
+        pencil.arc(950, 10, 30, 0, Math.PI * 2);
+        pencil.fill();
+        pencil.closePath();
+
+        //creating mountain
+        pencil.fillStyle = '#622D1B';
+        pencil.beginPath();
+        pencil.moveTo(750,250);
+        pencil.lineTo(820,100);//tip of mountain1
+        pencil.lineTo(890,250);
+
+        
+        pencil.moveTo(810,250);//start of mountain2
+        pencil.lineTo(900,50);//tip
+        pencil.lineTo(990,250);
+
+        pencil.moveTo(920,250);//third mountain
+        pencil.lineTo(970,50);//tip
+        pencil.lineTo(1030,250);
+
+        pencil.closePath();
+        pencil.fill();
+
+        //making the 2nd mountain to be behind by drawing strokes on the first and third mountain
+        pencil.beginPath();
+        pencil.strokeStyle = "#5A2919";
+        pencil.moveTo(750,250);
+        pencil.lineTo(820,100);//tip of mountain1
+        pencil.lineTo(890,250);
+        
+        pencil.moveTo(920,250);//third mountain
+        pencil.lineTo(970,50);//tip
+        pencil.lineTo(1030,250);
+        pencil.closePath();
+        pencil.stroke();
+
+//creating snow on top of mountain1
+        pencil.beginPath();
+        pencil.strokeStyle = "#FFFFFF";
+        pencil.fillStyle="#FFFFFF";
+        pencil.moveTo(810,120);
+        pencil.lineTo(820,100);//tip of mountain1
+        pencil.lineTo(830,120);
+        pencil.closePath();
+        pencil.fill();
+        pencil.stroke();
+
+//creating snow on top of mountain2
+        pencil.beginPath();
+        pencil.strokeStyle = "#FFFFFF";
+        pencil.fillStyle="#FFFFFF";
+        pencil.moveTo(878,100);
+        pencil.lineTo(900,50);//tip of mountain2
+        pencil.lineTo(923,100);
+        pencil.closePath();
+        pencil.fill();
+        pencil.stroke();
+        
+
+//creating snow on top of mountain3
+        pencil.beginPath();
+        pencil.strokeStyle = "#FFFFFF";
+        pencil.fillStyle="#FFFFFF";
+        pencil.moveTo(957,100);
+        pencil.lineTo(970,50);//tip of mountain3
+        pencil.lineTo(985,100);
+        pencil.closePath();
+        pencil.fill();
+        pencil.stroke();
+
+//creating house
+        roof.fillStyle = '#622D1B'; // Brown color for roof
+        roof.beginPath();
+        roof.moveTo(750,20); // takes in (xcoord,ycoord) they are points
+        roof.lineTo(850,100);
+        roof.lineTo(648,100);
+        roof.lineTo(750,20);
+        roof.moveTo(820,200);
+        roof.lineTo(820,100);
+        roof.lineTo(680,100);
+        roof.lineTo(680,200);
+        roof.lineTo(820,200);
+        roof.closePath();
+        roof.fill();
+
+//creating windows
+        pencil2.fillStyle="#B7CD17";
+        pencil2.fillRect(700, 120, 20, 20); // Window 1
+        pencil2.fillRect(780, 120, 20, 20); //window 2
+
+//door
+        pencil2.fillStyle="#463D1E";
+        pencil2.fillRect(735,140,30,60);
+
+
+//text
+       pencil2.font="30px Arial";
+       pencil2.fillStyle="blue";
+       pencil2.fillText("My Cartoon :D", 500,390)
+      
+         
+ 
+
+//creates boat
+        pencil.beginPath();
+        pencil.strokeStyle = "#000000";
+        pencil.fillStyle = '#A68F70';
+        pencil.moveTo(15,180);//15,15
+        pencil.bezierCurveTo(15,255,180,255,180,180);//150,250,500,250,500,150
+        pencil.moveTo(15,180);
+        pencil.lineTo(180,180);
+        pencil.closePath();
+        pencil.stroke();
+        pencil.fill();
+
+//creates boat sail
+        pencil.fillStyle = '#9A9999';
+        pencil.beginPath();
+        pencil.moveTo(90,180);
+        pencil.lineTo(90,120);
+        pencil.moveTo(90,120);
+        pencil.bezierCurveTo(90,120,170,160,90,165);
+        pencil.closePath();
+        pencil.stroke();
+        pencil.fill();
+
+        
+//making a layout for water 
+    pencil2.beginPath();
+    pencil2.fillStyle = '#2E79CE';
+    pencil2.moveTo(0,0);
+    pencil2.lineTo(850,0);
+    pencil2.lineTo(560,30);
+    pencil2.lineTo(50,30);
+    pencil2.fill();
+
+//making water shadow
+
+    pencil2.beginPath();
+    pencil2.fillStyle = '#255E9E';
+    pencil2.moveTo(0,0);
+    pencil2.lineTo(200,0);
+    pencil2.lineTo(100,30);
+    pencil2.lineTo(50,30);
+    pencil2.fill();
+    </script>
+</body>
+</html>
