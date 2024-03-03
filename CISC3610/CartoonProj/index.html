@@ -191,31 +191,77 @@
         pencil.fill();
         pencil.stroke();
 
+// //creating house
+//         roof.fillStyle = '#622D1B'; // Brown color for roof
+//         roof.beginPath();
+//         roof.moveTo(750,20); // takes in (xcoord,ycoord) they are points
+//         roof.lineTo(850,100);
+//         roof.lineTo(648,100);
+//         roof.lineTo(750,20);
+//         roof.moveTo(820,200);
+//         roof.lineTo(820,100);
+//         roof.lineTo(680,100);
+//         roof.lineTo(680,200);
+//         roof.lineTo(820,200);
+//         roof.closePath();
+//         roof.fill();
+
+// //creating windows
+//         pencil2.fillStyle="#B7CD17";
+//         pencil2.fillRect(700, 120, 20, 20); // Window 1
+//         pencil2.fillRect(780, 120, 20, 20); //window 2
+
+// //door
+//         pencil2.fillStyle="#463D1E";
+//         pencil2.fillRect(735,140,30,60);
+
+// number of houses
+const numHouses = 2;
+        const houseWidth = 600;
+        const houseHeight = 80;
+        const houseSpacing =200;
+        const houseY = 200;
+        for (let i = 0; i < numHouses; i++) {
+            let x = 100 + i * houseSpacing; // Adjust x-coordinate for each house
+
+            // Draw house
+            pencil2.fillStyle = '#622D1B'; // Brown color for roof
+            pencil2.beginPath();
+
+            pencil2.moveTo(x + houseWidth * 0.4, 200);
+            pencil2.lineTo(x + houseWidth * 0.4, 100); 
+            pencil2.lineTo(x + houseWidth * 0.6, 100); 
+            pencil2.lineTo(x + houseWidth * 0.6, 200); 
+            pencil2.lineTo(x + houseWidth * 0.4, 200); 
+            pencil2.closePath();
+            pencil2.fill();
+
+            // Draw windows
+            pencil2.fillStyle = "#B7CD17"; 
+            pencil2.fillRect(x + 260, 140, 20, 20); // W1
+            pencil2.fillRect(x + 320, 140, 20, 20); // W2
+
+            // Draw door
+            pencil2.fillStyle = "#463D1E"; 
+            pencil2.fillRect(x + 285, 140, 30, 60); 
+        }
 //creating house
+
+        //roof
         roof.fillStyle = '#622D1B'; // Brown color for roof
         roof.beginPath();
-        roof.moveTo(750,20); // takes in (xcoord,ycoord) they are points
-        roof.lineTo(850,100);
-        roof.lineTo(648,100);
-        roof.lineTo(750,20);
-        roof.moveTo(820,200);
-        roof.lineTo(820,100);
-        roof.lineTo(680,100);
-        roof.lineTo(680,200);
-        roof.lineTo(820,200);
+        roof.moveTo(600,50); // takes in (xcoord,ycoord) they are points
+        roof.lineTo(700,100);
+        roof.lineTo(498,100);
+        roof.lineTo(600,50);
+
+
+        roof.moveTo(400,50); // takes in (xcoord,ycoord) they are points
+        roof.lineTo(500,100);
+        roof.lineTo(298,100);
+        roof.lineTo(400,50);
         roof.closePath();
         roof.fill();
-
-//creating windows
-        pencil2.fillStyle="#B7CD17";
-        pencil2.fillRect(700, 120, 20, 20); // Window 1
-        pencil2.fillRect(780, 120, 20, 20); //window 2
-
-//door
-        pencil2.fillStyle="#463D1E";
-        pencil2.fillRect(735,140,30,60);
-
-
 //text
        pencil2.font="30px Arial";
        pencil2.fillStyle="blue";
