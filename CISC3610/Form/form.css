@@ -1,0 +1,23 @@
+#body {
+   background-image:url('workplace-with-blue-office-supplies.jpg');
+   background-repeat: no-repeat;
+   background-attachment:fixed;
+   background-size: cover;
+   margin:0px 50px 80px 40px;
+}
+#form{
+   
+    position: relative;
+    text-align: center;
+    margin-top:200px;
+    margin-left: 30%;
+    margin-right: 30%;
+    
+}
+#formbody{
+    border-style:solid ;
+    border-radius: 10px;
+    padding-bottom: 20px;
+    
+
+}

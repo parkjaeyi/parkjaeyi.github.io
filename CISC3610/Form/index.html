@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <title>Form</title>
+    <script language="JavaScript">
+        // Check if the localStorage object exists
+        if(localStorage) {
+            $(document).ready(function() {
+                $(".save").click(function() {
+                    // Get input name
+                    var User = $("#user").val();
+                    var Password = $("#pw").val();
+                    // Store data
+                    localStorage.setItem("user", User);
+                    localStorage.setItem("pw", Password);
+                });
+                $(".access").click(function() {
+                    // Retrieve data
+                    var storedUser = localStorage.getItem("user");
+                    $("#user").val(storedUser); 
+                });
+            });
+        } else {
+            alert("Sorry, your browser does not support local storage.");
+        }
+
+
+        function redirectToNextPage() {
+            // Redirect to the next page
+            window.location.href = "NextPage.html";
+        }
+    </script>
+</head>
+<body id="body">
+    <form name="form" id = "form">
+        <div id="formbody">
+            <h1>Registration Form</h1>
+            <br>
+            <label>User Id:</label> <input type="text" id="user"required><br>
+            <br>
+            <label>Password:</label> <input type="password" id="pw" required> <br>
+            <br>
+            <label>Name:</label> <input type="text" required> <br>
+            <br>
+        <!--the "name" attribute is very important. It indicates the group its in-->
+            <input type="radio" name="animals">
+            <label>dog</label>
+            <input type="radio" name="animals">
+            <label>cat</label>
+        </div> 
+       <button class="save" onclick="redirectToNextPage()">Next</button>   <!--leads to the next page once the button is clicked-->
+    </form>
+   
+</body>
+</html>
