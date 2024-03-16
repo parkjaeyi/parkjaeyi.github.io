@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="form.css">
     <title>Form</title>
-    <script language="JavaScript">
+    <script >
         // Check if the localStorage object exists
         if(localStorage) {
             $(document).ready(function() {
@@ -13,15 +13,35 @@
                     // Get input name
                     var User = $("#user").val();
                     var Password = $("#pw").val();
+                    var animalLabel = $("input[name='animals']:checked + label").text();
                     // Store data
                     localStorage.setItem("user", User);
                     localStorage.setItem("pw", Password);
+                    localStorage.setItem("animals",animalLabel);
+                    alert("saved");
                 });
                 $(".access").click(function() {
                     // Retrieve data
                     var storedUser = localStorage.getItem("user");
+                    var storedPassword=localStorage.getItem("pw");
+                    var storedAnimalLabel = localStorage.getItem("animals");
+
                     $("#user").val(storedUser); 
+                    $("#pw").val(storedPassword);
+                    $("input[name='animals']").each(function() {
+                        if ($(this).next('label').text().trim() === storedAnimalLabel.trim()) {
+                            $(this).prop('checked', true);
+                        }
+                    });
+
                 });
+
+
+                $(".reset").click(function() {
+                    $("input[type='text']").val("");
+                    $("input[type='password']").val("");
+                    $("input[type='radio']").prop('checked', false);
+                })
             });
         } else {
             alert("Sorry, your browser does not support local storage.");
@@ -32,6 +52,8 @@
             // Redirect to the next page
             window.location.href = "NextPage.html";
         }
+
+
     </script>
 </head>
 <body id="body">
@@ -39,11 +61,11 @@
         <div id="formbody">
             <h1>Registration Form</h1>
             <br>
-            <label>User Id:</label> <input type="text" id="user"required><br>
+            <label>User Id:</label> <input type="text" id="user"><br>
             <br>
-            <label>Password:</label> <input type="password" id="pw" required> <br>
+            <label>Password:</label> <input type="password" id="pw" > <br>
             <br>
-            <label>Name:</label> <input type="text" required> <br>
+            <label>Name:</label> <input type="text" > <br>
             <br>
         <!--the "name" attribute is very important. It indicates the group its in-->
             <input type="radio" name="animals">
@@ -51,7 +73,10 @@
             <input type="radio" name="animals">
             <label>cat</label>
         </div> 
-       <button class="save" onclick="redirectToNextPage()">Next</button>   <!--leads to the next page once the button is clicked-->
+        <button class="reset" >Reset</button> <!--Clears data-->
+        <button class="save" >Save</button>  <!--Saves data-->
+        <button class="access" > Get Access</button>
+        <button class="next" onclick="redirectToNextPage()">Next</button>   <!--leads to the next page once the button is clicked-->
     </form>
    
 </body>
