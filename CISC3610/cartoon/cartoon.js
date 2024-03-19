@@ -14,7 +14,7 @@ function changeCanvasColor() {
 
    //ground color
     context.fillStyle = "green";
-    context.fillRect(1, 0, canvas.width, canvas.height)
+    context.fillRect(0, 0, canvas.width, canvas.height)
 }
 function changeBackgroundColor () {
 
