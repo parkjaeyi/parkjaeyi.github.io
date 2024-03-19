@@ -21,3 +21,17 @@
     
 
 }
+.convert{
+    color: white;
+    padding: 20px;
+    display: none;
+    margin-top: 10px;
+}
+.lb{
+    padding-top: 0;
+    color: black;
+}
+.kilo{
+    padding-top: 0;
+    color: black;
+}
