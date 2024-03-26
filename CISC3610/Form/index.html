@@ -9,28 +9,7 @@
     <script language="JavaScript">
         
         
-        // Check if the localStorage object exists
-        // if(localStorage) {
-        //     $(document).ready(function() {
-        //         $(".Save").click(function() {
-        //             // Get input name
-        //             // var User = $("#user").val();
-        //             // var Password = $("#pw").val();
-        //             // // Store data
-        //             // localStorage.setItem("user", User);
-        //             // localStorage.setItem("pw", Password);
-        //         });
-        //         $(".Access").click(function() {
-        //             // Retrieve data
-        //             var storedUser = localStorage.getItem("user");
-        //             $("#user").val(storedUser); 
-        //         });
-                
-        //     });
-        // } else {
-        //     alert("Sorry, your browser does not support local storage.");
-        // }
-
+       
 
         function redirectToNextPage() {
             // Redirect to the next page
@@ -38,6 +17,34 @@
         }
 
         $(document).ready(function(){
+            function convertWeight() {
+                //convert lb to kilo
+                var lb = parseFloat($("#lb-lb").val());
+                var kilo = parseFloat($("#lb-kilo").val());
+
+                //convert kilo to lb
+                var kilo2 = parseFloat($("#kilo-kilo").val());
+                var lb2 = parseFloat($("#kilo-lb").val());
+                
+                // Convert lb to kilo if lb value is provided
+                if (lb==lb) {
+                    var kiloValue = lb / 2.205;
+                    $("#lb-kilo").val(kiloValue.toFixed(2));
+                }
+                // Convert kilo to lb if kilo value is provided
+                if (kilo2==kilo2) {
+                    var lbValue = kilo2 * 2.205;
+                    $("#kilo-lb").val(lbValue.toFixed(2));
+                }
+
+
+
+            }
+
+            // Attach event listener to input fields
+            $("#lb-lb, #kilo-lb").on("input", convertWeight);
+            $(" #kilo-kilo,#lb-kilo").on("input", convertWeight);
+
             $('input[type="radio"]').click(function(){
                 var inputValue = $(this).attr("value");
                 var targetBox = $("." + inputValue);   //it looks for the input of the <input value="[input]">
@@ -62,17 +69,17 @@
             <br>
             <div class="lb convert"> 
                 <label>LB:
-                <input type="number" id="lb"></label>
+                <input type="number" id="lb-lb"></label>
                 <br>
                 <label>Kilo
-                <input type="number" id="kilo"></label> 
+                <input type="number" id="lb-kilo"></label> 
             </div>
             <div class="kilo convert">
                 <label>Kilo
-                <input type="number" id="kilo"></label> 
+                <input type="number" id="kilo-kilo"></label> 
                 <br>
                 <label>LB:
-                <input type="number" id="lb"></label>
+                <input type="number" id="kilo-lb"></label>
             </div>
            
         </div> 

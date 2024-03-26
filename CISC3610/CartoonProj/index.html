@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cartoon</title>
     <script  src="cartoon.js"></script>
-    <link rel="stylesheet" href="cartoon.css">
+    <link ref="stylesheet" href="cartoon.css">
 </head>
 <body id="body" style="position: center; padding: 0; margin-top: 5%; margin-left: 275px;">
+<a href="https://parkjaeyi.github.io/CISC3610/HomePage.html" style="font-size:20px">HomePage</a>
     <div id="bodybackground" > <!--w/ mountian-->
          <canvas id="Canvas" width="1000" height="600" style="border:1px solid #000000;position:absolute"></canvas>
     </div>
@@ -15,7 +16,7 @@
         <canvas id="mountainCanvas"width="1000" height="600" style="border:1px solid #000000;position:absolute"></canvas>
     </div> -->
    <div id="ground"  >
-    <canvas id="Canvas2" width="1000" height="400" style="position:absolute;transform: translate(0, 200px);"></canvas>
+    <canvas id="Canvas2" width="1001" height="401" style="position:absolute;transform: translate(0, 200px);"></canvas>
    </div>
    <div id="house">
     <canvas id="Canvas3" width="1000" height="400" style="position:absolute;transform: translate(0, 200px);"></canvas>
@@ -189,8 +190,33 @@
         pencil.closePath();
         pencil.fill();
         pencil.stroke();
+
+// //creating house
+//         roof.fillStyle = '#622D1B'; // Brown color for roof
+//         roof.beginPath();
+//         roof.moveTo(750,20); // takes in (xcoord,ycoord) they are points
+//         roof.lineTo(850,100);
+//         roof.lineTo(648,100);
+//         roof.lineTo(750,20);
+//         roof.moveTo(820,200);
+//         roof.lineTo(820,100);
+//         roof.lineTo(680,100);
+//         roof.lineTo(680,200);
+//         roof.lineTo(820,200);
+//         roof.closePath();
+//         roof.fill();
+
+// //creating windows
+//         pencil2.fillStyle="#B7CD17";
+//         pencil2.fillRect(700, 120, 20, 20); // Window 1
+//         pencil2.fillRect(780, 120, 20, 20); //window 2
+
+// //door
+//         pencil2.fillStyle="#463D1E";
+//         pencil2.fillRect(735,140,30,60);
+
 // number of houses
-        const numHouses = 2;
+const numHouses = 2;
         const houseWidth = 600;
         const houseHeight = 80;
         const houseSpacing =200;
@@ -234,25 +260,8 @@
         roof.lineTo(500,100);
         roof.lineTo(298,100);
         roof.lineTo(400,50);
-//house base
-//         roof.moveTo(820,200);
-//         roof.lineTo(820,100);
-//         roof.lineTo(680,100);
-//         roof.lineTo(680,200);
-//         roof.lineTo(820,200);
         roof.closePath();
         roof.fill();
-
-// //creating windows
-//         pencil2.fillStyle="#B7CD17";
-//         pencil2.fillRect(700, 120, 20, 20); // Window 1
-//         pencil2.fillRect(780, 120, 20, 20); //window 2
-
-// //door
-//         pencil2.fillStyle="#463D1E";
-//         pencil2.fillRect(735,140,30,60);
-
-
 //text
        pencil2.font="30px Arial";
        pencil2.fillStyle="blue";
