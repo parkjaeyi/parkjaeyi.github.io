@@ -3,19 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Audio Lab</title>
 </head>
 <body>
     <script language="javascript">
-        var aud= new Audio(0);
+        var Eddie= new Audio("");//mp3 for E
+        var Ate= new Audio("");
+        var Dynamite= new Audio("");
+        var Good= new Audio("");
+        var Bye= new Audio("");
+        var Ed= new Audio("");
+        
+        function playEddie(){
+            Eddie.play();
+        }
+        function playAte(){
+            Ate.play();
+        }
+        function playDynamite(){
+            Dynamite.play();
+        }
+        function playGood(){
+            Good.play();
+        }
+        function playBye(){
+            Bye.play();
+        }
+        function playEd(){
+            Ed.play();
+        }
+
+       
 
         
         
 
     </script>
 
-    <button onlick="aud.play();">
+    <!-- <button onlick="aud.play();">
         Dog
-    </button>
+    </button> -->
+<div style="align-items: center; display: flex; margin-top: 150px; margin-left: 250px;">
+ <!-- <img src="guitar.jpg"  width="1000px"usemap="#image-map" >
+
+<map name="image-map" id=" ref_box" style="color: aqua;">
+    <area target="" alt="E" title="E" href="" coords="43,56,39,120,2024,149,2028,91" shape="poly">
+    <area target="" alt="A" title="A" href="" coords="43,131,36,171,1997,196,2002,158" shape="poly">
+    <area target="" alt="D" title="D" href="" coords="21,209,16,248,2010,258,2008,225,1044,220" shape="poly">
+    <area target="" alt="G" title="G" href="" coords="29,278,27,316,2004,319,2004,288" shape="poly">
+    <area target="" alt="B" title="B" href="" coords="34,355,30,390,1995,382,1999,344" shape="poly">
+    <area target="" alt="E" title="E" href="" coords="30,427,32,462,2010,435,2004,406" shape="poly">
+</map> -->
+<img src="guitar_cropped.jpg" usemap="#image-map">
+
+<map name="image-map">
+    
+    <area target="" alt="E" title="E" href="javascript:playEddie();" coords="16,10,14,34,1025,50,1026,23" shape="poly">
+    <audio id="Eddie"></audio>
+    <area target="" alt="A" title="A" href="javascript:playAte();" coords="15,78,9,101,1024,113,1028,88,492,84" shape="poly">
+    <audio id="Ate"></audio>
+    <area target="" alt="D" title="D" href="javascript:playDynamite();" coords="13,147,8,171,1039,180,1022,153,969,156" shape="poly">
+    <audio id="Dynamite"></audio>
+    <area target="" alt="G" title="G" href="javascript:playGood();" coords="6,212,5,240,1030,239,1033,216" shape="poly">
+    <audio id="Good"></audio>
+    <area target="" alt="B" title="B" href="javascript:playBye();" coords="6,276,4,302,1029,301,1028,275" shape="poly">
+    <audio id="Bye"></audio>
+    <area target="" alt="E" title="E" href="javascript:playEd();" coords="4,346,3,368,1028,360,1025,332" shape="poly">
+    <audio id="Ed"></audio>
+</map>
+</div>
+
+
+
+
+
+
+
+
+
+   
 </body>
 </html>
