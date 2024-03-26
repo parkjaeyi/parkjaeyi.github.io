@@ -7,32 +7,94 @@
 </head>
 <body>
     <script language="javascript">
-
         var Eddie= new Audio("Eddie.mp3");//mp3 for E
         var Ate= new Audio("Ate.mp3");
         var Dynamite= new Audio("Dynamite.mp3");
         var Good= new Audio("Good.mp3");
         var Bye= new Audio("Bye.mp3");
         var Ed= new Audio("Ed.mp3");
-
         
         function playEddie(){
             Eddie.play();
+            if(document.getElementById("Edisplay").style.display== "none" || document.getElementById("Adisplay").style.display== "block" || document.getElementById("Ddisplay").style.display=="block" 
+            ||document.getElementById("Gdisplay").style.display== "block" ||document.getElementById("Bdisplay").style.display== "block" ||document.getElementById("edisplay").style.display== "block")
+            {
+                
+                document.getElementById("Edisplay").style.display= "block";
+                document.getElementById("Adisplay").style.display= "none";
+                document.getElementById("Ddisplay").style.display= "none";
+                document.getElementById("Gdisplay").style.display= "none";
+                document.getElementById("Bdisplay").style.display= "none";
+                document.getElementById("edisplay").style.display= "none";
+                
+            }
         }
         function playAte(){
             Ate.play();
+            if(document.getElementById("Adisplay").style.display== "none" || document.getElementById("Edisplay").style.display== "block"|| document.getElementById("Ddisplay").style.display=="block" 
+            ||document.getElementById("Gdisplay").style.display== "block" ||document.getElementById("Bdisplay").style.display== "block" ||document.getElementById("edisplay").style.display== "block")
+            {
+                document.getElementById("Adisplay").style.display= "block";
+                document.getElementById("Edisplay").style.display= "none";
+                document.getElementById("Ddisplay").style.display= "none";
+                document.getElementById("Gdisplay").style.display= "none";
+                document.getElementById("Bdisplay").style.display= "none";
+                document.getElementById("edisplay").style.display= "none";
+                
+            }
         }
         function playDynamite(){
             Dynamite.play();
+            if(document.getElementById("Ddisplay").style.display== "none" || document.getElementById("Edisplay").style.display== "none" || document.getElementById("Adisplay").style.display== "block"
+            ||document.getElementById("Gdisplay").style.display== "block" ||document.getElementById("Bdisplay").style.display== "block" ||document.getElementById("edisplay").style.display== "block")
+            {
+                document.getElementById("Ddisplay").style.display= "block";
+                document.getElementById("Adisplay").style.display= "none";
+                document.getElementById("Edisplay").style.display= "none";
+                document.getElementById("Gdisplay").style.display= "none";
+                document.getElementById("Bdisplay").style.display= "none";
+                document.getElementById("edisplay").style.display= "none";
+
+            }
         }
         function playGood(){
             Good.play();
+            if(document.getElementById("Gdisplay").style.display== "none" ||document.getElementById("Bdisplay").style.display== "block" ||document.getElementById("edisplay").style.display== "block"
+            || document.getElementById("Edisplay").style.display== "none" || document.getElementById("Adisplay").style.display== "block"|| document.getElementById("Ddisplay").style.display=="block" )
+            {
+                document.getElementById("Adisplay").style.display= "none";
+                document.getElementById("Edisplay").style.display= "none";
+                document.getElementById("Ddisplay").style.display= "none";
+                document.getElementById("Gdisplay").style.display= "block";
+                document.getElementById("Bdisplay").style.display= "none";
+                document.getElementById("edisplay").style.display= "none";
+            }
         }
         function playBye(){
             Bye.play();
+            if(document.getElementById("Bdisplay").style.display== "none" || document.getElementById("Gdisplay").style.display== "block" ||document.getElementById("edisplay").style.display== "block"
+            || document.getElementById("Edisplay").style.display== "none" || document.getElementById("Adisplay").style.display== "block"|| document.getElementById("Ddisplay").style.display=="block" )
+            {
+                document.getElementById("Adisplay").style.display= "none";
+                document.getElementById("Edisplay").style.display= "none";
+                document.getElementById("Ddisplay").style.display= "none";
+                document.getElementById("Gdisplay").style.display= "none";
+                document.getElementById("Bdisplay").style.display= "block";
+                document.getElementById("edisplay").style.display= "none";
+            }
         }
         function playEd(){
             Ed.play();
+            if(document.getElementById("edisplay").style.display== "none" || document.getElementById("Gdisplay").style.display== "block" ||document.getElementById("Bdisplay").style.display== "block" 
+            || document.getElementById("Edisplay").style.display== "none" || document.getElementById("Adisplay").style.display== "block"|| document.getElementById("Ddisplay").style.display=="block"  )
+            {
+                document.getElementById("Adisplay").style.display= "none";
+                document.getElementById("Edisplay").style.display= "none";
+                document.getElementById("Ddisplay").style.display= "none";
+                document.getElementById("Gdisplay").style.display= "none";
+                document.getElementById("Bdisplay").style.display= "none";
+                document.getElementById("edisplay").style.display= "block";
+            }
         }
 
        
@@ -45,18 +107,21 @@
     <!-- <button onlick="aud.play();">
         Dog
     </button> -->
-<div style="align-items: center; display: flex; margin-top: 150px; margin-left: 250px;">
- <!-- <img src="guitar.jpg"  width="1000px"usemap="#image-map" >
-
-<map name="image-map" id=" ref_box" style="color: aqua;">
-    <area target="" alt="E" title="E" href="" coords="43,56,39,120,2024,149,2028,91" shape="poly">
-    <area target="" alt="A" title="A" href="" coords="43,131,36,171,1997,196,2002,158" shape="poly">
-    <area target="" alt="D" title="D" href="" coords="21,209,16,248,2010,258,2008,225,1044,220" shape="poly">
-    <area target="" alt="G" title="G" href="" coords="29,278,27,316,2004,319,2004,288" shape="poly">
-    <area target="" alt="B" title="B" href="" coords="34,355,30,390,1995,382,1999,344" shape="poly">
-    <area target="" alt="E" title="E" href="" coords="30,427,32,462,2010,435,2004,406" shape="poly">
-</map> -->
-<img src="guitar_cropped.jpg" usemap="#image-map">
+    <h1 style="text-align: center;">Click on the strings</h1>
+    <div style="text-align: center;">
+    <h2 id="Edisplay"style="display: none;">E</h2>
+    <h2 id="Adisplay"style="display: none;">A</h2>
+    <h2 id="Ddisplay"style="display: none;">D</h2>
+    <h2 id="Gdisplay"style="display: none;">G</h2>
+    <h2 id="Bdisplay"style="display: none;">B</h2>
+    <h2 id="edisplay"style="display: none;">E</h2>
+    </div>
+    
+<div style="align-items: center;  text-align: center;">
+    
+    
+    
+<img src="guitar_cropped.jpg" usemap="#image-map" style="align-items: center;">
 
 <map name="image-map">
     
