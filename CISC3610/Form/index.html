@@ -51,6 +51,12 @@
                 $(".convert").not(targetBox).hide();  //.convert is in css
                 $(targetBox).show();
             });
+
+            $("button[name='Reset']").click(function() {
+                document.getElementById("form").reset();
+            });
+
+            
         });
         
     </script>
@@ -86,7 +92,7 @@
         <button name="Reset">Reset</button>
         <button name="Save" >Save</button> 
         <button name="Access">Access</button>
-        <button name="next" onclick="redirectToNextPage()">Next</button>   <!--leads to the next page once the button is clicked-->
+       <!-- <button name="next" onclick="redirectToNextPage()">Next</button>-->   <!--leads to the next page once the button is clicked-->
     </form>
    
 </body>
