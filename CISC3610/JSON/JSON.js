@@ -1,5 +1,5 @@
 function BarLoad(){
-    const fruitBar=document.getElementById("myCanvas");
+        const fruitBar=document.getElementById("myCanvas");
         const pencil=fruitBar.getContext("2d");
 
         let fruit = [
@@ -15,18 +15,26 @@ function BarLoad(){
         for (let i = 0; i < fruit.length; i++) {
             const fruitBar = fruit[i];
             pencil.fillStyle = fruitBar.color;
-            pencil.fillRect(0, 100 * i + 150, fruitBar.quantity * 20, 100);// xpos, ypox, width(scale), height
-            //text
+            pencil.fillRect(0, 110 * i + 80, fruitBar.quantity * 20, 100);// xpos, ypox, width(scale), height
            
+            
+            //text
             pencil.font="25px Arial";
             pencil.fillStyle = "black";
-            pencil.fillText(fruitBar.quantity, 150, 100*i +200); //text, xpos, yposBetweenArr + ypos
-            pencil.fillText(fruitBar.name, 150, 98*i +230);
+            pencil.fillText(fruitBar.quantity + " "+fruitBar.name, fruitBar.quantity+20, 115*i +130); //text, xpos, yposBetweenArr + ypos
+           
             
 
             
-        }
+        }   
         
+       
+        
+}
+
+function text()
+{
+
 }
 
 function backgroundColor(){
