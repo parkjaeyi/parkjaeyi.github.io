@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+</head>
+<body > 
+<a href="https://parkjaeyi.github.io/CISC3610/HomePage.html" style="font-size:20px; margin-left: 50px;">HomePage</a>
+    <h1 style="text-align: center;" >DATA VISUALIZATION OF STEAM AND DISCORD</h1>
+   
+    <canvas id="bar-chart" width="800" height="450" style="margin-top:100px ;margin-bottom: 50px; border-style: solid;"></canvas>
+    <canvas id="pie-chart" width="800" height="450" style="border-style: solid;"></canvas>
+    <script language="JavaScript">
+        new Chart(document.getElementById("bar-chart"),{
+            type: 'bar',
+            data:{
+                labels:["United States","China", "Russia","Brazil","Germany","United Kingdom"],
+                datasets:[{
+                    label:"Users (millions)",
+                    backgroundColor:["#0598F8","#F81005","#B07F05","#08B005","#6D6F6D","#6C00FF"],
+                    data:[13.7,11.4,9.5,4.9,3.6,2.6]
+                }]
+            },
+            options:{
+                legend:{display:false},
+                title:{
+                    display:true,
+                    text:'Steam Users By Countries (millions) in 2024'
+                }
+            }
+        });
+
+        new Chart(document.getElementById("pie-chart"),{
+            type:'pie',
+            data:{
+                labels:["United States","Brazil","Russia","India","United Kingdom"],
+                datasets:[{
+                    label:"Users (millions)",
+                    backgroundColor:["#0598F8","#F81005","#B07F05","#08B005","#6D6F6D","#6C00FF"],
+                    data:[244.5,115.9,39.9,38.4,34.8]
+                }]
+            },
+            options:{
+                legend:{display:false},
+                title:{
+                    display:true,
+                    text:'Discord Users By Countries (millions) in 2024'
+                }
+            }
+        })
+    </script>
+</body>
+</html>
