@@ -1266,10 +1266,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 438983173}
-  - component: {fileID: 438983174}
+  - component: {fileID: 438983176}
   - component: {fileID: 438983175}
   m_Layer: 0
-  m_Name: Portal
+  m_Name: PortalToMap1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1284,26 +1284,12 @@ Transform:
   m_GameObject: {fileID: 438983172}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.46, y: -4.25, z: -9.969291}
+  m_LocalPosition: {x: -8.41, y: -4.25, z: -9.969291}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &438983174
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 438983172}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f53272e6c84340543be4304011cacf95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  portalCollider: {fileID: 438983175}
-  player: {fileID: 0}
 --- !u!61 &438983175
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1311,7 +1297,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 438983172}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -1336,7 +1322,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.062499046, y: -0.0464015}
+  m_Offset: {x: 0.16896701, y: 1.725512}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1347,8 +1333,22 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.336174, y: 0.30397797}
+  m_Size: {x: 0.7991061, y: 3.847805}
   m_EdgeRadius: 0
+--- !u!114 &438983176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 438983172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d75e9b066fb0b1f42b3d44a78d61d238, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  portalCollider: {fileID: 438983175}
+  player: {fileID: 618832037}
 --- !u!1 &449021885
 GameObject:
   m_ObjectHideFlags: 0
@@ -1786,7 +1786,7 @@ Transform:
   m_GameObject: {fileID: 618832037}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.44, y: -3.9, z: 0}
+  m_LocalPosition: {x: -7.25, y: -4.27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1892,22 +1892,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d4d8b7e6c161084890e29f26aa24d34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraFollow: {fileID: 0}
   moveAction: {fileID: -689452277863297325, guid: 4a7ec9566cdc7ab49bee83b123c5e18c, type: 3}
   jumpAction: {fileID: 2117111861050800642, guid: 4a7ec9566cdc7ab49bee83b123c5e18c, type: 3}
   attackAction: {fileID: 4556258173302747073, guid: 4a7ec9566cdc7ab49bee83b123c5e18c, type: 3}
   dashAction: {fileID: -5193445093736086229, guid: 4a7ec9566cdc7ab49bee83b123c5e18c, type: 3}
   inputValue: {x: 0, y: 0}
+  jumpValue: 0
   groundBoxSize: {x: 0.5, y: 0.5}
   wallBoxSize: {x: 0.2, y: 0.4}
   enemyBoxSize: {x: 0.2, y: 0.395}
-  boxCollider2D: {fileID: 0}
   moveSpeed: 3
   jumpForce: 6
   jumpHangGravity: 0.7
   jumpHangTime: 0.2
   newJumpHangTime: 0
-  wallJumpForce: 7
+  wallJumpForceX: 0
+  wallJumpForceY: 0
   wallJumpWaitTime: 0.25
+  wallSlideSpeed: 0
+  wallSlideAccelerationRate: 0
   dashSpeed: 20
   dashTimeOut: 0.1
   dashTimeOutWeight: 5
@@ -1925,22 +1929,23 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   attackTime: 0.825
-  landingTime: 0.3333
-  waitTime: 0
-  isFacingRight: 1
   isAttacking: 0
-  isJumping: 0
-  isJumpHanging: 0
-  isWallJumping: 0
-  isDashing: 0
-  isFalling: 0
-  isSliding: 0
-  isLanded: 0
-  isGrounded: 0
+  landingTime: 0.3333
+  isFacingRight: 1
   isRightWalled: 0
   isLeftWalled: 0
   isRightEnemy: 0
   isLeftEnemy: 0
+  isIdle: 0
+  isFalling: 0
+  isGrounded: 0
+  isJumping: 0
+  isJumpHanging: 0
+  isWallJumping: 0
+  isDashing: 0
+  isSliding: 0
+  isLanded: 0
+  waitTime: 0
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -2856,15 +2861,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b25983d24d7a90948a9de49b35bf64df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 0
-  currentExp: 0
-  requiredExp: 0
-  health: 0
-  attack: 0
-  defense: 0
-  strength: 0
-  dexterity: 0
-  isLoaded: 0
 --- !u!4 &886110032
 Transform:
   m_ObjectHideFlags: 0
@@ -3931,10 +3927,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b89e52051b1c675429b995ca3f6fc419, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 618832041}
-  smoothings: -2
-  minPostion: {x: -100000, y: 0}
-  maxPostion: {x: 100000, y: 0}
+  player: {fileID: 0}
+  position: {x: 0, y: 0, z: 0}
+  cameraOffset: {x: 0, y: 0, z: 0}
+  dampingTime: 0
+  currentVelocity: {x: 0, y: 0}
+  minX: 0
+  maxX: 0
+  minY: 0
+  maxY: 0
 --- !u!114 &1315185481
 MonoBehaviour:
   m_ObjectHideFlags: 0

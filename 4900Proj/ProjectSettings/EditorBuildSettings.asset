@@ -14,8 +14,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Map1-Jady 1.unity
     guid: 28004eab4393a2844aecd76e80eda1b2
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Map2.unity
     guid: d1885002d34d5aa49b5b811e31e446f9
+  - enabled: 1
+    path: Assets/Scenes/Map2-Jady.unity
+    guid: dd5a7310fc189164fb795e140f9d92e7
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: cea73a3bd715f9246999b87b8ba3ad5b, type: 2}
