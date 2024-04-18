@@ -5,13 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <style>
+        body {
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+             height: 800px;
+             margin: 0;
+         }
+ 
+         .chart-container {
+             width: 600px; 
+             height: 400px; 
+             display: flex;
+             justify-content: center;
+             align-items: center;
+         }
+ 
+         h1 {
+             text-align: center;
+             margin-top: 100px; 
+         }
+         .home {
+             position: absolute;
+             top: 20px;
+             left: 200px;
+         }
+     </style>
 </head>
 <body > 
-<a href="https://parkjaeyi.github.io/CISC3610/HomePage.html" style="font-size:20px; margin-left: 50px;">HomePage</a>
-    <h1 style="text-align: center;" >DATA VISUALIZATION OF STEAM AND DISCORD</h1>
+    <div class="home">
+        <a href="https://parkjaeyi.github.io/CISC3610/HomePage.html" style="font-size:20px;">HomePage</a>
+    </div>
+
+    <h1>DATA VISUALIZATION OF STEAM AND DISCORD</h1>
    
-    <canvas id="bar-chart" width="800" height="450" style="margin-top:100px ;margin-bottom: 50px; border-style: solid;"></canvas>
-    <canvas id="pie-chart" width="800" height="450" style="border-style: solid;"></canvas>
+    <div id="container">
+        <div class="chart-container" style="text-align:center;">
+            <canvas id="bar-chart"  style="margin-right: 50px; border-style: solid;"></canvas>
+            <canvas id="pie-chart" style="width: 200px; height: 100px; border-style: solid;"></canvas>
+        </div>
+    </div>
     <script language="JavaScript">
         new Chart(document.getElementById("bar-chart"),{
             type: 'bar',
