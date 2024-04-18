@@ -35,7 +35,7 @@ TagManager:
   - Wall
   - Snow
   - item
-  - 
+  - BackGroundDecor
   - 
   - 
   - 
@@ -52,6 +52,9 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: BackgroundDecor
+    uniqueID: 870065277
     locked: 0
   - name: Item
     uniqueID: 1149992115
