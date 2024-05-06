@@ -6,8 +6,59 @@
   <link rel="stylesheet" href="form.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+
+
+<script language="JavaScript">
+
+    function redirectToNextPage() {
+        // Redirect to the next page
+        window.location.href = "NextPage.html";
+    }
+
+    $(document).ready(function(){
+        function convertWeight() {
+            //convert lb to kilo
+            var lb = parseFloat($("#lb-lb").val());
+            var kilo = parseFloat($("#lb-kilo").val());
+
+            //convert kilo to lb
+            var kilo2 = parseFloat($("#kilo-kilo").val());
+            var lb2 = parseFloat($("#kilo-lb").val());
+            
+            // Convert lb to kilo if lb value is provided
+            if (lb==lb) {
+                var kiloValue = lb / 2.205;
+                $("#lb-kilo").val(kiloValue.toFixed(2));
+            }
+            // Convert kilo to lb if kilo value is provided
+            if (kilo2==kilo2) {
+                var lbValue = kilo2 * 2.205;
+                $("#kilo-lb").val(lbValue.toFixed(2));
+            }
+
+
+
+        }
+
+       
+        $("#lb-lb, #kilo-lb").on("input", convertWeight);
+        $(" #kilo-kilo,#lb-kilo").on("input", convertWeight);
+
+        $('input[type="radio"]').click(function(){
+            var inputValue = $(this).attr("value");
+            var targetBox = $("." + inputValue);   //it looks for the input of the <input value="[input]">
+            $(".convert").not(targetBox).hide();  //.convert is in css
+            $(targetBox).show();
+        });
+        
+        $("button[name='Reset']").click(function() {
+            document.getElementById("form").reset();
+        });
+    });
+
+</script>
 </head>
-<body>
+<body id="body">
     <form name="form" id = "form">
         <div id="formbody">
             <h1>Conversion Form</h1>
