@@ -8,9 +8,39 @@
 
 </head>
 <body>
-  <h1>Hello, World!</h1>
-	<BR>
-  <button onclick="window.close();">Close Window</button>
+    <form name="form" id = "form">
+        <div id="formbody">
+            <h1>Conversion Form</h1>
+          
+        <!--the "name" attribute is very important. It indicates the group its in-->
+           
+            <label> <input type="radio"  name="weight" value="lb">lb</label>
+           
+            <label> <input type="radio"  name="weight" value="kilo">kilo</label>
+            <br>
+            <br>
+            <div class="lb convert"> 
+                <label>LB:
+                <input type="number" id="lb-lb"></label>
+                <br>
+                <label>Kilo
+                <input  id="lb-kilo"></label> 
+            </div>
+            <div class="kilo convert">
+                <label>Kilo
+                <input type="number" id="kilo-kilo"></label> 
+                <br>
+                <label>LB:
+                <input type="number" id="kilo-lb"></label>
+            </div>
+           
+        </div> 
+        <button name="Reset">Reset</button> <!--Clear data-->
+        <button name="Save" >Save</button> <!--save data-->
+        <button name="Access">Access</button> <!--retrieve data-->
+        <!--<button name="next" onclick="redirectToNextPage()">Next</button>-->   <!--leads to the next page once the button is clicked-->
+    </form>
+   
 <script src="app.js"></script>
 </body>
 </html>
