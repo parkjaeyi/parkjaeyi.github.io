@@ -1,6 +1,6 @@
 {
-  "short_name": "Sample 3610 PWA",
-  "name": "Sample 3610 PWA",
+  "short_name": "Temperature PWA",
+  "name": "Temperature PWA",
   "icons": [
     {
       "src": "icon-192x192.png",
