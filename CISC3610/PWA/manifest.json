@@ -2,10 +2,7 @@
 {
     "name":"PWA Conversion App",
     "short_name":"PWA",
-    "start_url":"/CISC3610/PWA/",
-    "display":"standalone",
-    "background_color":"#3367D6",
-    "theme_color":"#3367D6",
+    
     "description":"This is a PWA App",
     "id": "v1.04",
     "icons":[
@@ -20,8 +17,11 @@
         "type":"image/png"
       }
       
-    ]
-    
+    ],
+    "start_url":"/~goetz/cisc3610/pwa",
+    "display":"standalone",
+    "background_color":"#3367D6",
+    "theme_color":"#3367D6"
 
 
 }
