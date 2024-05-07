@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<!--
+
 <file name="manifest.json" server="www.sci.brooklyn.cuny.edu//u/goetz/public_html/" local="133570863325339459" remote="133570863420000000" Dst="2" />
 <file name="app.js" server="www.sci.brooklyn.cuny.edu//u/goetz/public_html/" local="133570837068925979" remote="133570840930000000" Dst="2" />
 <file name="icon-192x192.png" server="www.sci.brooklyn.cuny.edu//u/goetz/public_html/" local="133570865497396547" remote="133570866290000000" Dst="2" />
 <file name="icon-512x512.png" server="www.sci.brooklyn.cuny.edu//u/goetz/public_html/" local="133570866146786922" remote="133570866290000000" Dst="2" />
 <file name="index.html" server="www.sci.brooklyn.cuny.edu//u/goetz/public_html/" local="133570863899104685" remote="133570863950000000" Dst="2" />
 <file name="service-worker.js" server="www.sci.brooklyn.cuny.edu//u/goetz/public_html/" local="133570863196559825" remote="133570863430000000" Dst="2" />
--->
 
 
 
+<!--
 <file name="manifest.json" server="https://parkjaeyi.github.io/CISC3610/PWATesting/"/>
 <file name="app.js" server="https://parkjaeyi.github.io/CISC3610/PWATesting/"   />
 <file name="icon-192x192.png" server="https://parkjaeyi.github.io/CISC3610/PWATesting/"   />
 <file name="icon-512x512.png" server="https://parkjaeyi.github.io/CISC3610/PWATesting/"  />
 <file name="index.html" server="https://parkjaeyi.github.io/CISC3610/PWATesting/"   />
 <file name="service-worker.js" server="https://parkjaeyi.github.io/CISC3610/PWATesting/"  />
-
+-->
 
 </dwsync>
