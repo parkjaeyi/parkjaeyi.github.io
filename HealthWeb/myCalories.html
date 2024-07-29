@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Calories</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <script src="mobileMenu.js" defer></script>
+    <link rel="stylesheet" href="main.css"/>
+    <link rel= "stylesheet" href = "myCalories.css"/>
+    <script src="myCalories.js" defer></script>
+
+
+</head>
+<body>
+
+    <section class="header">
+        <nav>
+            <a class="logo" href="index.html"><img src="images/healthLogo.png" alt="Logo" width="192" height="100.5"></a>
+            <div class="navLinks" id="nav-links">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="myCalorieTracker.html">My Calorie Tracker</a></li>
+                    <li><a href="exercise.html">Exercise</a></li>
+                    <li><a href="aboutUs.html">About Us</a></li>
+                    <a href="#"><button id="signIn" onclick="">Sign In</button></a>
+
+
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+    </section>
+
+    <section class="progress-bar">
+        <h3>Your Goal: </h3>
+    <div class="progress">
+        <div class="progress__fill"></div>
+        <span class="progress__text">0</span>
+    </div>
+    <p>Track Your Progress through this bar and the lists below the bar.<br>
+        If you did not know how many calories to track we got you! <br>
+        We took info you gave us and used the Mifflin-St Jeor equations. <br>
+        They basically tell a person what they need to maintain weight. <br>
+    </p>
+
+    <p>Remember to eat below if you want to lose weight!</p>
+    </section>
+
+     <section class="content">
+        <!-- We put all the content in here-->
+
+        
+        <div class="list-container">
+            <div class="meal1">
+                <img src="images/breakfastIcon.png" alt="breakfastIcon" class="food-icon">
+                <h3>Breakfast</h3>
+                <input class="food-name" type="text"  placeholder="Food Item">
+                <input class="breakfast-calories" type="text" required pattern="[0-9]*" placeholder="Calories" min="0" required>
+                <button onclick='addFood("breakfast-calories")' id="addbtn" class="toggle-add">+</button>
+            </div>
+            <ul class="breakfast-list">
+            </ul>
+        </div>
+   
+        <div class="list-container">
+            <div class="meal2">
+                <img src="images/lunchIcon.png" alt="lunchIcon" class="food-icon">
+                <h3>Lunch</h3>
+                <input class="food-name" type="text" placeholder="Food Item">
+                <input class="lunch-calories" type="text" required pattern="[0-9]*" placeholder="Calories" min="0" required>
+                <button onclick='addFood("lunch-calories")'id="addbtn" class="toggle-add">+</button>
+            </div>
+            <ul class="lunch-list">
+            </ul>
+        </div>
+   
+        <div class="list-container">
+            <div class="meal3">
+                <img src="images/dinnerIcon.png" alt="dinnerIcon" class="food-icon">
+                <h3>Dinner</h3>
+                <input class="food-name" type="text" placeholder="Food Item">
+                <input class="dinner-calories" type="text" required pattern="[0-9]*" placeholder="Calories" min="0" required>
+                <button onclick='addFood("dinner-calories")' id="addbtn" class="toggle-add">+</button>
+            </div>
+            <ul class="dinner-list">
+            </ul>
+        </div>
+   
+        <div class="list-container">
+            <div class="meal4">
+                <img src="images/snacksIcon.png" alt="snacksIcon" class="food-icon">
+                <h3>Snacks</h3>
+                <input class="food-name" type="text" placeholder="Food Item">
+                <input class="snacks-calories" type="text" required pattern="[0-9]*" placeholder="Calories" min="0" required>
+                <button onclick='addFood("snacks-calories")' id="addbtn" class="toggle-add">+</button>
+            </div>
+            <ul class="snacks-list">
+            </ul>
+        </div>
+ 
+    </section>  
+    
+    
+    <footer>
+        <nav class="footer-content">
+            <a href="index.html"><img src="images/healthLogo.png" alt="Logo" width="192" height="100.5"></a>
+            <div class="navLinks2" id="nav-links">
+                <!-- <i class="fa fa-times" ></i> -->
+
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="myCalorieTracker.html">My Calorie Tracker</a></li>
+                    <li><a href="exercise.html">Exercise</a></li>
+                    <li><a href="aboutUs.html">About Us</a></li>
+                    
+                </ul>
+            </div>
+            <!-- <i class="fa fa-bars" onclick="showMenu()"></i> -->
+        </nav>
+    </footer>
+</body>
+</html>
